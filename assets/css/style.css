@@ -1,0 +1,120 @@
+body {
+  overflow-x: hidden;
+}
+
+.nav-item {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #000000;
+  padding: 0 1rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.logo {
+  width: 80%;
+  height: 80%;
+}
+
+.nav-item {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #000000;
+  padding: 0 1rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-item.active {
+  -webkit-text-decoration: underline #FC5603 0.3rem;
+          text-decoration: underline #FC5603 0.3rem;
+}
+
+h1 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h2 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  color: #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h3 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  color: #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Parallaxe */
+.parallax-container {
+  position: relative;
+  height: 80vh;
+  overflow: hidden;
+}
+
+.parallax-image {
+  background-image: url("/assets/images/jogging.jpg"); /* Remplacez 'your-image.jpg' par le chemin de votre image */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Important pour l'effet de parallaxe */
+  height: 80%;
+  width: 100%;
+}
+
+.parallax-image-2 {
+  background-image: url("/assets/images/runner_solo.jpg"); /* Remplacez 'your-image.jpg' par le chemin de votre image */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Important pour l'effet de parallaxe */
+  height: 80%;
+  width: 100%;
+}
+
+.parallax-text {
+  position: absolute;
+  top: 30%;
+  right: 0%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+}
+
+.parallax-text p {
+  font-size: 3em;
+}
+
+/* Fin Parallaxe */
+.btn-primary {
+  background-color: #FC5603;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  color: #F2F2F2;
+  transition: all 0.3s ease-in-out;
+}
+
+.footer {
+  background-color: #FC5603;
+  color: #F2F2F2;
+  padding: 1rem;
+  text-align: center;
+}
+
+footer a {
+  color: #F2F2F2;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,138 @@
+$primary-color: #6DB7C1;
+$secondary-color: #FC5603;
+$tertiary-color: #027966;
+$quaternary-color: #F2F2F2;
+$quinary-color: #000000;
+$primary-font: 'Montserrat', sans-serif;
+
+//On empeche le scroll horizontal
+body{
+    overflow-x: hidden;
+}
+
+.nav-item{
+    font-family: $primary-font;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: $quinary-color;
+    padding: 0 1rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.logo{
+    width: 80%;
+    height: 80%;
+}
+
+.nav-item{
+    font-family: $primary-font;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: $quinary-color;
+    padding: 0 1rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.line {
+    width: 100%;
+    height: 0.8rem;
+    background-color: $primary-color;
+    margin: 0.5rem 0;
+}
+
+.nav-item.active {
+    text-decoration: underline $secondary-color 0.3rem;
+}
+
+@mixin center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1{
+    font-family: $primary-font;
+    font-weight: bold;
+    @include center;
+}
+
+h2{
+    font-family: $primary-font;
+    font-weight: bold;
+    color: $quinary-color;
+    @include center;
+}
+
+h3{
+    font-family: $primary-font;
+    font-weight: bold;
+    color: $quinary-color;
+    @include center;
+}
+
+/* Parallaxe */
+
+.parallax-container {
+    position: relative;
+    height: 80vh;
+    overflow: hidden;
+}
+
+.parallax-image {
+    background-image: url('/assets/images/jogging.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Important pour l'effet de parallaxe */
+    height: 80%;
+    width: 100%;
+}
+
+.parallax-image-2 {
+    background-image: url('/assets/images/runner_solo.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Important pour l'effet de parallaxe */
+    height: 80%;
+    width: 100%;
+}
+
+
+.parallax-text {
+    position: absolute;
+    top: 30%;
+    right: 0%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+}
+
+.parallax-text p {
+    font-size: 3em;
+}
+
+/* Fin Parallaxe */
+
+.btn-primary{
+    background-color: $secondary-color;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    font-family: $primary-font;
+    font-weight: bold;
+    color: $quaternary-color;
+    transition: all 0.3s ease-in-out;
+}
+
+.footer{
+    background-color: $secondary-color;
+    color: $quaternary-color;
+    padding: 1rem;
+    text-align: center;
+}
+
+footer a{
+    color: $quaternary-color;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
