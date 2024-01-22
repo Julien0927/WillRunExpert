@@ -3,9 +3,9 @@
 $menu = [
     'index.php' => 'Accueil',
     'quisuisje.php' => 'Qui suis-je ?',
-    'contact.php' => 'Contact',
     'coaching.php' => 'Coaching',
     'blog.php' => 'Blog',
+    'contact.php' => 'Contact',
 ];
 
 $admin = [

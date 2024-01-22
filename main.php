@@ -14,7 +14,7 @@ require_once 'templates/header.php';
 </div>
     <div class="row d-flex justify-content-center">
         <div class="col-md-5">
-            <img src="assets/images/photo2.jpg" class="img-fluid" alt="Coureurs">
+            <img src="assets/images/photo2.webp" class="img-fluid imgAccueil" alt="Coureurs">
         </div>
         <div class="col-md-5">
             <h2 class="mt-3">COACHING INDIVIDUEL</h2>
@@ -29,7 +29,7 @@ require_once 'templates/header.php';
                 de vos séances, permettant une amélioration de vos performances sans 
                 compromettre votre qualité de vie.
             </p>
-            <button class="btn-primary" href="">En savoir plus</button>
+            <button class="btn-primary" href="coaching.php">En savoir plus</button>
         </div>
     </div>
 
@@ -47,10 +47,10 @@ require_once 'templates/header.php';
                 de vos séances, permettant une amélioration de vos performances sans 
                 compromettre votre qualité de vie.
             </p>
-            <button class="btn-primary" href="">En savoir plus</button>
+            <button class="btn-primary" href="coaching.php">En savoir plus</button>
         </div>
         <div class="col-md-5 mb-5">
-            <img src="assets/images/photo1.jpg" class="img-fluid" alt="Coureurs">
+            <img src="assets/images/photo1.webp" class="img-fluid imgAccueil2" alt="Coureurs">
         </div>
     </div>
 <div class="parallax-container">

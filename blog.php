@@ -1,6 +1,13 @@
 <?php
 require_once 'templates/header.php';
 ?>
+<div class="parallax-container">
+    <div class="parallax-image-6"></div>
+    <div class="parallax-text-3">
+        <p>BLOG</p>
+    </div>
+</div>
+
 <div class="row mb-2">
     <div class="col-md-6">
       <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">

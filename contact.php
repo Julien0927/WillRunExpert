@@ -1,8 +1,36 @@
 <?php
 require_once 'templates/header.php';
 ?>
+
+<div class="parallax-container">
+    <div class="parallax-image-5"></div>
+    <div class="parallax-text-3">
+        <p>CONTACT</p>
+    </div>
+</div>
 <div>
-    <form method="post">
+    <div>
+        <h2 class="center contact mx-auto mb-5 ">COORDONNÉES</h2>
+    </div>
+    <div class="row d-flex mb-5">
+        <div class="col-md-6 d-flex align-items-center justify-content-center">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2763.5462512732283!2d-1.1951303000000002!3d46.1597809!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x480154882c48e5bd%3A0x36848a1c01391562!2sBidault%20Willy!5e0!3m2!1sfr!2sfr!4v1705768824852!5m2!1sfr!2sfr" width="400" height="300" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="col-md-6 d-flex align-items-center justify-content-center">
+            <img src="assets/images/dos_carte_visite.webp" alt="coordonnées de contact" width="400" height="300">
+        </div>
+    </div>
+    <div>
+        <h2 class="center contact mx-auto mt-5 mb-5 ">PRISE DE RENDEZ-VOUS</h2>
+    </div>
+    <div class="d-flex justify-content-center">
+        
+        <p>Accepte les nouveaux patients sur Doctolib<br>
+        Cabinet de kinésithérapie IR2S - La Rochelle<br> rue des Trois Frères 17000 La Rochelle</p>
+        <button class="btn btn-primary">PRENDRE UN RENDEZ-VOUS</button>
+        <a href="https://www.doctolib.fr/masseur-kinesitherapeute/la-rochelle/willy-bidault/booking/new-patient?specialityId=9"><img src="assets/images/doctolib.png" alt="prise de rendez-vous Doctolib"></a>
+    </div>
+    <!--<form method="post">
         <div>
             <label for="name">Nom</label>
             <input type="text" name="name" id="name" placeholder="Votre nom">
@@ -26,7 +54,7 @@ require_once 'templates/header.php';
         <div>
             <input type="submit" value="Envoyer">
         </div>
-    </form>
+    </form>-->
 </div>
 
 <?php

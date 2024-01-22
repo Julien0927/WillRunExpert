@@ -20,7 +20,7 @@ $currentPage = basename($_SERVER['SCRIPT_NAME']);
 <body>
   <header class="navbar" >
     <div class="d-flex col-md-3">
-      <img class="logo" src="assets/images/logo2.png" alt="Coaching individuel">
+      <a href="index.php"><img class="logo" src="assets/images/logo2.png" alt="Coaching individuel"></a>
     </div>
           <nav class="d-flex navbar navbar-expand-lg mx-auto ">
               <div class="container-fluid">

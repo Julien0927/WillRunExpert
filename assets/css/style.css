@@ -13,7 +13,7 @@ body {
 
 .logo {
   width: 80%;
-  height: 80%;
+  height: 100%;
 }
 
 .nav-item {
@@ -64,7 +64,7 @@ h3 {
 }
 
 .parallax-image {
-  background-image: url("/assets/images/jogging.jpg"); /* Remplacez 'your-image.jpg' par le chemin de votre image */
+  background-image: url("../images/jogging.webp");
   background-size: cover;
   background-position: center;
   background-attachment: fixed; /* Important pour l'effet de parallaxe */
@@ -73,7 +73,43 @@ h3 {
 }
 
 .parallax-image-2 {
-  background-image: url("/assets/images/runner_solo.jpg"); /* Remplacez 'your-image.jpg' par le chemin de votre image */
+  background-image: url("../images/runner_solo.webp");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Important pour l'effet de parallaxe */
+  height: 80%;
+  width: 100%;
+}
+
+.parallax-image-3 {
+  background-image: url("../images/coureur_aube.webp");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Important pour l'effet de parallaxe */
+  height: 80%;
+  width: 100%;
+}
+
+.parallax-image-4 {
+  background-image: url("../images/candra.webp");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Important pour l'effet de parallaxe */
+  height: 80%;
+  width: 100%;
+}
+
+.parallax-image-5 {
+  background-image: url("../images/contact.webp");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Important pour l'effet de parallaxe */
+  height: 80%;
+  width: 100%;
+}
+
+.parallax-image-6 {
+  background-image: url("../images/blog.webp");
   background-size: cover;
   background-position: center;
   background-attachment: fixed; /* Important pour l'effet de parallaxe */
@@ -90,11 +126,32 @@ h3 {
   color: #fff;
 }
 
-.parallax-text p {
+.parallax-text-3 {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+}
+
+.parallax-text p, .parallax-text-3 {
   font-size: 3em;
 }
 
 /* Fin Parallaxe */
+.imgAccueil, .imgAccueil2 {
+  box-shadow: #000000 0rem 0 1rem;
+}
+
+.imgAccueil {
+  border-radius: 1rem 0 0 1rem;
+}
+
+.imgAccueil2 {
+  border-radius: 0 1rem 1rem 0;
+}
+
 .btn-primary {
   background-color: #FC5603;
   border: none;
@@ -104,6 +161,37 @@ h3 {
   font-weight: bold;
   color: #F2F2F2;
   transition: all 0.3s ease-in-out;
+}
+
+.shadow {
+  filter: drop-shadow(20px -20px 0px #6DB7C1);
+}
+
+.formation {
+  background-color: #FC5603;
+  font-family: "Montserrat", sans-serif;
+  color: #F2F2F2;
+  border-radius: 0 1.5rem 1.5rem 0;
+  padding: 0.5rem;
+  transition: all 0.3s ease-in-out;
+  margin-left: 90px;
+}
+
+.formation p {
+  margin-left: 90px;
+}
+
+.contact {
+  background-color: #FC5603;
+  font-family: "Montserrat", sans-serif;
+  color: #F2F2F2;
+  border-radius: 1rem 1rem 1rem 1rem;
+  padding: 0.5rem;
+  width: 80%;
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .footer {
