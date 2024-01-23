@@ -152,7 +152,7 @@ h3 {
   border-radius: 0 1rem 1rem 0;
 }
 
-.btn-primary {
+.btn-original {
   background-color: #FC5603;
   border: none;
   border-radius: 0.5rem;
@@ -179,6 +179,26 @@ h3 {
 
 .formation p {
   margin-left: 90px;
+}
+
+.square1 {
+  background-color: #6DB7C1;
+  width: 12em;
+  height: 12em;
+  font-family: "Montserrat", sans-serif;
+  color: #F2F2F2;
+  padding: 1rem;
+  margin-bottom: 10px;
+}
+
+.square2 {
+  background-color: #027966;
+  width: 12em;
+  height: 12em;
+  font-family: "Montserrat", sans-serif;
+  color: #F2F2F2;
+  padding: 1rem;
+  margin-bottom: 10px;
 }
 
 .contact {

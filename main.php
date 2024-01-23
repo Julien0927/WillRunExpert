@@ -29,7 +29,7 @@ require_once 'templates/header.php';
                 de vos séances, permettant une amélioration de vos performances sans 
                 compromettre votre qualité de vie.
             </p>
-            <button class="btn-primary" href="coaching.php">En savoir plus</button>
+            <button class="btn-original" href="coaching.php">En savoir plus</button>
         </div>
     </div>
 
@@ -47,7 +47,7 @@ require_once 'templates/header.php';
                 de vos séances, permettant une amélioration de vos performances sans 
                 compromettre votre qualité de vie.
             </p>
-            <button class="btn-primary" href="coaching.php">En savoir plus</button>
+            <button class="btn-original" href="coaching.php">En savoir plus</button>
         </div>
         <div class="col-md-5 mb-5">
             <img src="assets/images/photo1.webp" class="img-fluid imgAccueil2" alt="Coureurs">
