@@ -1,6 +1,7 @@
 $primary-color: #6DB7C1;
 $secondary-color: #FC5603;
 $tertiary-color: #027966;
+$tertiary1-color: hsla(170, 97%, 24%, 0.63);
 $quaternary-color: #F2F2F2;
 $quinary-color: #000000;
 $primary-font: 'Montserrat', sans-serif;
@@ -8,11 +9,12 @@ $primary-font: 'Montserrat', sans-serif;
 //On empeche le scroll horizontal
 body{
     overflow-x: hidden;
+    font-family: $primary-font;
 }
 
 .nav-item{
     font-family: $primary-font;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     font-weight: 600;
     color: $quinary-color;
     padding: 0 1rem;
@@ -22,15 +24,6 @@ body{
 .logo{
     width: 80%;
     height: 100%;
-}
-
-.nav-item{
-    font-family: $primary-font;
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: $quinary-color;
-    padding: 0 1rem;
-    transition: all 0.3s ease-in-out;
 }
 
 .nav-item.active {
@@ -43,25 +36,12 @@ body{
     align-items: center;
 }
 
-h1{
+h1, h2, h3, h4{
     font-family: $primary-font;
     font-weight: bold;
     @include center;
 }
 
-h2{
-    font-family: $primary-font;
-    font-weight: bold;
-    color: $quinary-color;
-    @include center;
-}
-
-h3{
-    font-family: $primary-font;
-    font-weight: bold;
-    color: $quinary-color;
-    @include center;
-}
 
 /* Parallaxe */
 
@@ -172,10 +152,35 @@ h3{
     margin-left: 90px; 
 }
 
+/*.card:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 1rem $primary-color;
+}*/
+
+.card {
+    background-color: $primary-color;
+    font-family: $primary-font;
+    color: $quaternary-color;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    width: 80%;
+    transition: all 0.3s ease-in-out;
+    @include center;
+}
+
+.card-title {
+    font-weight: bold;
+    color: $quinary-color;
+    text-align: center;
+}
+
+.list-group{
+    border-radius: 0.5rem ;
+}
+
 @mixin square {
     width: 12em;
     height: 12em;
-    font-family: $primary-font;
     color: $quaternary-color;
     padding: 1rem;
     margin-bottom: 10px;

@@ -21,7 +21,7 @@ require_once 'templates/header.php';
                 <h2 class="text-center mb-4">Willy BIDAULT</h2>
                 <ul style="list-style: none">
                     <li class="mb-4"><img src="assets/icones/instagram-24.png" alt="@willrunexpert" class="me-3">@willrunexpert</li>
-                    <li class="mb-4"><img src="assets/icones/email-24.png" alt="email" class="me-3">will.physio@gmail.com</li>
+                    <li class="mb-4"><img src="assets/icones/email-24.png" alt="email" class="me-3">willy.physio@gmail.com</li>
                     <li class="mb-4"><img src="assets/icones/localisation-24.png" alt="localisation" class="me-3">Rue des Trois Frères Bât. C, 17000 La Rochelle</li>
                     <li class="mb-4"><img src="assets/icones/phone-24.png" alt="telephone" class="me-3">06 09 33 00 93</li>
                 </ul>

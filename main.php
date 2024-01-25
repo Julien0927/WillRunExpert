@@ -3,8 +3,8 @@ require_once 'templates/header.php';
 ?>
 
 <div class="center">
-        <h1 class="mb-3">COACHING COURSE À PIED</h1>
-        <h3 class="mb-3">ACCOMPAGNEMENT DU COUREUR - STRATÉGIE DE RÉCUPÉRATION</h3>
+        <h2 class="mb-3">COACHING COURSE À PIED</h2>
+        <h4 class="center mb-3">ACCOMPAGNEMENT DU COUREUR - STRATÉGIE DE RÉCUPÉRATION</h4>
 </div>
 <div class="parallax-container">
     <div class="parallax-image"></div>

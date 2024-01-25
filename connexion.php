@@ -36,7 +36,7 @@ if(!empty($_POST)){
                 die ("Identifiants invalides");
             }
 
-            //Icie mot de passe et l'utilisateur sont valides
+            //Ici mot de passe et l'utilisateur sont valides
             //On va pouvoir connecter l'utilisateur
             //On démarre la session PHP
             session_start();
@@ -47,7 +47,6 @@ if(!empty($_POST)){
                 "email" => $user["email"],
                 "roles" => $user["roles"]
             ];
-
             //On peut rediriger l'utilisateur vers la page d'accueil
             header("Location: index.php");
             }

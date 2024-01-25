@@ -17,7 +17,7 @@ require_once ('templates/header.php');
             <li>Rue des Trois Frères Bât. C</li>
             <li>17000 La Rochelle</li>
             <li><img src="assets/icones/phone-16.png"> 06 09 33 00 93</li>
-            <li><img src="assets/icones/courrier-16.png">will.physio@gmail.com</li>
+            <li><img src="assets/icones/courrier-16.png">willy.physio@gmail.com</li>
             </ul>
         </div>
 

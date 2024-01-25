@@ -6,6 +6,7 @@ $menu = [
     'coaching.php' => 'Coaching',
     'blog.php' => 'Blog',
     'contact.php' => 'Contact',
+    'inscription.php' => 'Inscription', 
 ];
 
 $admin = [
