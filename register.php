@@ -51,7 +51,7 @@
 //}
 
 require_once ('templates/header.php');
-require_once ('connect.php');
+require_once ('lib/pdo.php');
 require_once ('App/users.php');
 
 $messages = [];
@@ -88,7 +88,7 @@ else{
 <div>
     <?php require_once ('templates/messages.php'); ?>
 
-    <form  method="post">
+    <form  method="post" action="register.php">
         <div>
             <label for="firstName">Prénom</label>
             <input type="text" name="firstName" id="firstName" placeholder="Votre prénom">

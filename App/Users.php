@@ -3,6 +3,7 @@
 namespace App\Users;
 
 use PDO;
+use PDOException;
 
 class Users {
     private PDO $db;
@@ -14,11 +15,6 @@ class Users {
 
     public function __construct(PDO $db) {
         $this->db = $db;
-        $this->firstName = "";
-        $this->lastName = "";
-        $this->email = "";
-        $this->password = "";
-        $this->role = self::ROLE_USER;
     }
 
     public function setFirstName(string $firstName) {
@@ -71,7 +67,7 @@ class Users {
     public function register() {
         $query = $this->db->prepare("INSERT INTO `users`(firstName, lastName, email, password, role) VALUES (:firstName, :lastName, :email, :password, role)");
 
-        $role = ["ROLE_ADMIN"];
+        $role = ["ROLE_USER", "ROLE_ADMIN"];
         $query->bindValue(":firstName", $this->firstName, PDO::PARAM_STR);
         $query->bindValue(":lastName", $this->lastName, PDO::PARAM_STR);
         $query->bindValue(":email", $this->email, PDO::PARAM_STR);
@@ -80,14 +76,39 @@ class Users {
         $query->execute();
     }
 
-    //methode permettant de hasher le mot de passe
-    public function hashPassword($password) {
-        return password_hash($password, PASSWORD_ARGON2ID);
-    }
 
     //methode permettant de verifier le mot de passe
     public function verifyPassword($password, $hash) {
         return password_verify($password, $hash);
+    }
+
+    public function login(string $email, string $password) {
+        //On verifie que l'email est valide
+        if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
+            throw new \Exception("Les identifiants ne sont pas valides");
+        }
+
+        try {
+        $query = $this->db->prepare("SELECT * FROM `users` WHERE email = :email");
+        $query->bindValue(":email", $email, PDO::PARAM_STR);
+        $query->execute();
+        $user = $query->fetch();
+
+        if(!$user || !password_verify($password, $user["password"])){
+            throw new \Exception("Les identifiants ne sont pas valides");
+        }
+
+        session_start();
+            $_SESSION["user"] = [
+                "id" => $user["id"],
+                "email" => $user["email"],
+                "role" => $user["role"]
+            ];
+
+            return true;
+        } catch (PDOException $e) {
+            throw new \Exception("Erreur de connexion à la base de données");
+        }
     }
 
     const ROLE_USER = "ROLE_USER";

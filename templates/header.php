@@ -1,5 +1,9 @@
 <?php
 require_once ('lib/config.php');
+require_once ('lib/pdo.php');
+require_once ('App/Users.php');
+require_once ('lib/session.php');
+
 $currentPage = basename($_SERVER['SCRIPT_NAME']);
 ?>
 
@@ -30,18 +34,19 @@ $currentPage = basename($_SERVER['SCRIPT_NAME']);
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                   <ul class="navbar-nav link-offset-3">
-                  <?php foreach ($menu as $key => $value) { ?>
-                    <li class="nav-item <?php echo ($currentPage === $key) ? 'active' : ''; ?>">
-                        <a href="<?= $key; ?>" class="nav-link"><?= $value; ?></a>
-                    </li>
-                  <?php } ?>
+                    <?php require_once ('lib/gestion_session.php') ?>
                   </ul>
                 </div>
               </div>
             </nav>
             <div>
-              <a class="nav-link" href="connexion.php" >
-                <img src="assets/icones/cadenas-orange-24.png" class="mx-5"/>
-              </a>
+              <?php
+              if(isset($_SESSION['user'])){?>
+                <a class="btn btn-original me-5" href="logout.php">Se déconnecter</a>
+                <?php } else { ?>
+                  <a class="nav-link" href="login.php" >
+                    <img src="assets/icones/cadenas-orange-24.png" class="mx-5"/>
+                  </a>
+              <?php } ?>
             </div>
   </header>

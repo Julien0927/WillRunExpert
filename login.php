@@ -1,4 +1,12 @@
 <?php
+require_once ('lib/pdo.php');
+require_once ('App/Users.php');
+
+use App\Users\Users;
+
+session_start();
+
+
 if(isset($_SESSION["user"])){
     header("Location: index.php");
     exit;
@@ -12,8 +20,24 @@ if(!empty($_POST)){
     if(isset($_POST["email"], $_POST["password"])
         && !empty($_POST["email"]) && !empty($_POST["password"])
     ){
+        try {
+            $user = new Users($db);
+
+            if($user->login($_POST["email"], $_POST["password"])){
+                header("Location: index.php");
+                exit;
+            }
+         else {
+            die("Les identifiants ne sont pas valides");
+        }
+        }
+        catch(Exception $e){
+            echo $e->getMessage();
+        }
+    }
+}
         //On verifie que l'email est valide
-        if(!filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)){
+       /*  if(!filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)){
             die("L'email n'est pas valide");
         }
 
@@ -26,7 +50,7 @@ if(!empty($_POST)){
         $query->execute();
         $user = $query->fetch();
         
-        if(!$user){
+        if($user){
             die("Identifiants invalides");
         }
         // Ici on a un user existant, on vérifie le mot de passe
@@ -53,14 +77,14 @@ if(!empty($_POST)){
         }
 }
 
-require_once ('templates/header.php');
+ */
 
+ require_once ('templates/header.php');
 
 ?>
-
 <h2>Connexion</h2>
 <div>
-    <form  method="post">
+    <form  method="post" action="login.php">
         <div>
             <label for="email">Email</label>
             <input type="email" name="email" id="email" placeholder="Votre email">
