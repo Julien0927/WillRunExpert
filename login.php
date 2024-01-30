@@ -6,6 +6,8 @@ use App\Users\Users;
 
 session_start();
 
+$messages = [];
+$errors = [];
 
 if(isset($_SESSION["user"])){
     header("Location: index.php");

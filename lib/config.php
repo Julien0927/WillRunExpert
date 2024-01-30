@@ -1,4 +1,5 @@
 <?php
+define ('_ARTICLES_IMG_PATH_', 'uploads');
 
 $menu = [
     'index.php' => 'Accueil',
