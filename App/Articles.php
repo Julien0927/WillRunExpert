@@ -37,7 +37,7 @@ class Articles {
     public function setLink(string $link) {
         $this->link = $link;
     }
-
+    //Fonction permmettant de recuperer la date et de la mettre au format date
     public function setDate(string $date) {
         $this->date = $date;
     }
