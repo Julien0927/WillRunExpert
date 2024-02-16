@@ -37,7 +37,7 @@ class Articles {
     public function setLink(string $link) {
         $this->link = $link;
     }
-    //Fonction permmettant de recuperer la date et de la mettre au format date
+    //Fonction permettant de recuperer la date et de la mettre au format date
     public function setDate(string $date) {
         $this->date = $date;
     }
@@ -66,6 +66,15 @@ class Articles {
         return $this->date;
     }
 
+    //Fonction permettant de recuperer un article par son id
+    public function getArticleById(int $id) {
+        $sql = "SELECT * FROM `articles` WHERE `id` = :id";
+        $query = $this->db->prepare($sql);
+        $query->bindValue(":id", $id, PDO::PARAM_INT);
+        $query->execute();
+        
+        return $query->fetch(PDO::FETCH_ASSOC);
+    }
     //Fonction d'ajouter un article
     public function addArticle(): void {
 
@@ -87,10 +96,26 @@ class Articles {
         $query = $this->db->prepare($sql);
         $query->execute();
        
-        return $query->fetchAll(PDO::FETCH_ASSOC);;
-    }
+        $articles = $query->fetchAll(PDO::FETCH_ASSOC);
 
-    //Fonction permmettant de mofifier un article
+        //Formatage de la date
+        foreach ($articles as $key => $article) {
+            $articles[$key]['date'] = $this->formatDate($article['date']);
+
+            if (strlen($article['content']) > 100) {
+                $articles[$key]['content'] = substr($article['content'], 0, 100) . '...';
+            }
+        }
+    
+        return $articles;
+    }
+    
+    private function formatDate(string $date): string {
+        return date('d/m/Y', strtotime($date));
+    }
+    //Fonction permettant d'afficher l'article complet
+
+    //Fonction permmettant de modifier un article
     public function updateArticle(): void {
         $sql = "UPDATE `articles` SET `title`=:title,`content`=:content,`image`=:image,`link`=:link,`date`=:date WHERE id=:id";
         $query = $this->db->prepare($sql);

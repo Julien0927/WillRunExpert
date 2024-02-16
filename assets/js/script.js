@@ -1,109 +1,192 @@
+document.addEventListener('DOMContentLoaded', () => {
+
 const services = [
     {
-        icon: 'visio-24.png',
-        title: 'Visio de 45’ au début du coaching',
-        description : 'Etablir un tour d’horizon de tes attentes, tes objectifs, ton historique.'
+        icon: 'objectifs-24.png',
+        title: 'Détermination de l\'objectif',
     },
 
     {
         icon: 'coureur-24.png',
-        title: 'Évaluation de la VMA en Début de saison',
-        description : 'Un point de départ précis pour personnaliser ton plan d\'entraînement.'
+        title: 'Ajustement du plan d\'entrainement<br>(VMA, nombre de séance par semaine,...)',
     },
 
+    
     {
         icon: 'applications-24.png',
-        title: 'Suivi personnalisé via l\'application Nolio',
-        description : 'Je m\'engage à te répondre dans les 24 heures via la messagerie intégrée.',
-        description : 'Contact illimité par messages.'
+        title: 'Analyse et suivi via l\'application Nolio',
     },
 
     {
-        icon: 'objectifs-24.png',
-        title: 'Détermination d\'objectifs clairs',
-        description : 'Ensemble, définissons tes objectifs à court, moyen et long terme.'
-    },
-
-    {
-        icon: 'planification-24.png',
-        title: 'Planification intelligente des séances d\'entraînement',
-        description : 'Tes séances s\'affichent automatiquement sur ta montre le jour de l\'entraînement.',
-        description : 'Au minimum 15 jours de visibilité sur ton plan d’entraînement.'
-    },
-
-
-    {
-        icon: 'plan-24.png',
-        title: 'Adaptation hebdomadaire du plan en fonction de ton agenda',
-        description : 'Flexibilité pour s\'adapter à ta vie professionnelle et personnelle.',
-        description : 'J\'adapte tes séances en fonction de tes contraintes professionnelles et familiales.',
-    },
-
-    {
-        icon: 'stats-24.png',
-        title: 'Analyse et suivi des données d\'entraînement',
-        description : 'Des retours détaillés pour optimiser chaque session.',
-        description : 'Contrôle de la charge pour la prévention des blessures.',
-        description : 'Assurons-nous que tu progresses sans te blesser en intégrant judicieusement les phases de développement et de récupération.'
-    },
-
-    {
-        icon: 'baskets-24.png',
-        title: 'Conseils sur le choix des chaussures',
-        description : 'En fonction de tes antécédents de blessures, le choix de la chaussure peut s’avérer important.',
-        description : 'Nous aborderons également l’intérêt d’avoir plusieurs paires de chaussures, afin de varier les contraintes \ret ainsi favoriser les adaptations corporelles (musculaires, articulaires, tendineuses, osseuses…).',
-    },
-
-    {
-        icon: 'conseiller-24.png',
-        title: 'Conseils techniques',
-        description : 'Conseils sur la foulée.',    
-        description : 'Fiches renforcement musculaire.',    
-        description : 'Conseils sur la psychologie du coureur, comment aborder une course au mieux, et mettre en place les bonnes stratégies de récupération.',    
-    },
-
-    {
-        icon: 'alimentation-vegan-24.png',
-        title: 'Conseils nutritionnels',
-        description : 'Alimentation quotidienne.',
-        description : 'Stratégie nutritionnelle à l’entraînement et le jour de la course.',
-        description : 'Formulaire micro-nutrition à remplir en début de coaching.',
+        icon: 'messages-24.png',
+        title: 'Contact illimité par messages',
     },
 
 ];
 
-const listGroup = document.querySelector('.list-group');
+    document.querySelectorAll('.services').forEach((list) => {
+        services.forEach((service) => {
+            const item = document.createElement('li');
+            item.classList.add('list-group-item');
+    
+            const img = document.createElement('img');
+            img.src = `assets/icones/${service.icon}`; 
+            img.classList.add('me-3', 'img-fluid');
+    
+            const title = document.createElement('span');
+            title.innerHTML = service.title;
 
-services.forEach(service => {
-    const listItem = document.createElement('li');
-    listItem.classList.add('list-group-item', 'dropdown');
+            item.appendChild(img);
+            item.appendChild(title);
+    
+            list.appendChild(item);
+        });
+    });
+    const servicesPremium = [
+        {
+            icon: 'objectifs-24.png',
+            title: 'Détermination de l\'objectif',
+        },
+    
+        {
+            icon: 'coureur-24.png',
+            title: 'Ajustement du plan d\'entrainement (VMA, nombre de séance par semaine,...)',
+        },
+    
+        
+        {
+            icon: 'applications-24.png',
+            title: 'Analyse et suivi via l\'application Nolio',
+        },
+    
+        {
+            icon: 'messages-24.png',
+            title: 'Contact illimité par messages',
+        },
+        {
+            icon: 'téléphone-24.png',
+            title: 'Point téléphonique mensuel',
+        },
 
-    const img = document.createElement('img');
-    img.src = `assets/icones/${service.icon}`;
-    img.classList.add('me-3');
+        {
+            icon: 'baskets-24.png',
+            title: 'Conseils chaussures',
+        },
 
-    const title = document.createTextNode(service.title);
+        {
+            icon: 'alimentation-vegan-24.png',
+            title: 'Conseils nutritionnels',
+        },
+    ];
 
-    const button = document.createElement('button');
-    button.classList.add('btn', 'btn-outline-alert', 'dropdown-toggle');
-    button.type = 'button';
-    button.setAttribute('data-bs-toggle', 'dropdown');
-    button.setAttribute('aria-expanded', 'false');
+    document.querySelectorAll('.servicesPremium').forEach((list) => {
+        servicesPremium.forEach((service) => {
+            const item = document.createElement('li');
+            item.classList.add('list-group-item');
+    
+            const img = document.createElement('img');
+            img.src = `assets/icones/${service.icon}`; 
+            img.classList.add('me-3', 'img-fluid');
+    
+            const title = document.createElement('span');
+            title.textContent = service.title;
+    
+            item.appendChild(img);
+            item.appendChild(title);
+    
+            list.appendChild(item);
+        });
+    });
 
-    const dropdownMenu = document.createElement('ul');
-    dropdownMenu.classList.add('dropdown-menu');
+const diplomes = [
+    {
+        year: 2019,
+        title: "D.U. Kinésitherapie du sport - Université de Nantes",
+    
+    },
 
-    const description = document.createElement('li');
-    description.classList.add('dropdown-item');
-    description.appendChild(document.createTextNode(service.description));
+    {
+        year: 2013,
+        title: "Diplôme d'État de Masseur-Kinésithérapeute - Université de Poitiers",
+    },
+];
 
-    dropdownMenu.appendChild(description);
+const ulDiplomes = document.getElementById('diplomes')
+diplomes.forEach(diplome => {
+    const li = document.createElement('li');
+    li.innerHTML = `<p><strong>${diplome.year}</strong> ${diplome.title}</p>`;
+    ulDiplomes.appendChild(li);
+});
 
-    listItem.appendChild(img);
-    listItem.appendChild(title);
-    listItem.appendChild(button);
-    listItem.appendChild(dropdownMenu);
+const formations = [
+    {
+        year: 2021,
+        title: "La prise en charge du pied du coureur - La Clinique du Coureur",
+    
+    },
 
-    listGroup.appendChild(listItem);
+    {
+        year: 2020,
+        title: "Traitement du Syndrome Fémoro-patellaire - Physio Sport Et Performance",
+    },
+    {
+        year: 2020,
+        title: "Optimisation du renforcement musculaire - SRP Formation",
+    },
+    {
+        year: 2019,
+        title: "Positionnement cycliste - SRP Formation",
+    },
+    {
+        year: 2019,
+        title: "Formation de prévention des blessures en course à pied - La Clinique du Coureur",
+    },
+    {
+        year: 2019,
+        title: "Formation Tendinopathies du membre inférieur - Agence EBP",
+    },
+    {
+        year: 2018,
+        title: "Planification de l'entraînement - La Clinique du Coureur",
+    },
+    {
+        year: 2018,
+        title: "Formation Nouveautés dans la prévention des blessures en courses - La Clinique du Coureur",
+    },
+    {
+        year: 2013,
+        title: "Formation McKenzie - Institut McKenzie",
+    },
+];
+
+const ulFormations = document.getElementById('formations')
+formations.forEach(formation => {
+    const li = document.createElement('li');
+    li.innerHTML = `<p><strong>${formation.year}</strong> ${formation.title}</p>`;
+    ulFormations.appendChild(li);
+});
+
+const experiences = [
+    {
+        year: "2021 - 2023",
+        title: "Praticien - Stade Rochelais Rugby - La Rochelle",
+    },
+
+    {
+        year: "2013 - 2022",
+        title: "Cabinet - La Rochelle",
+    },
+];
+
+const ulExperiences = document.getElementById('experiences')
+experiences.forEach(experience => {
+    const li = document.createElement('li');
+    li.innerHTML = `<p><strong>${experience.year}</strong> ${experience.title}</p>`;
+    ulExperiences.appendChild(li);
+});
+
+/*Affiche l'intégralité de l'article*/ 
+
 
 });
+

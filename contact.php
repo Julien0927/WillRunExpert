@@ -43,7 +43,7 @@ require_once 'templates/header.php';
         </div>
     </div>
     <div class="d-flex justify-content-center mt-3 mb-5">
-        <a class="btn btn-primary fw-bold px-3" href="https://www.doctolib.fr/masseur-kinesitherapeute/la-rochelle/willy-bidault/booking/new-patient?specialityId=9" role="button"><img src="assets/icones/calendrier-24.png" class="me-3" alt="bouton rendez-vous">PRENDRE RENDEZ-VOUS</a>
+        <a class="btn btn-tertiary fw-bold px-3" href="https://calendly.com/willrunexpert" role="button"><img src="assets/icones/calendrier-24.png" class="me-3" alt="bouton rendez-vous">PRENDRE RENDEZ-VOUS EN VISIO</a>
     </div>
         <!--<form method="post">
         <div>

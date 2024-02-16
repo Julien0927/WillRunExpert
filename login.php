@@ -5,6 +5,7 @@ require_once ('App/Users.php');
 use App\Users\Users;
 
 session_start();
+require_once ('lib/security.php');
 
 $messages = [];
 $errors = [];
@@ -86,17 +87,18 @@ if(!empty($_POST)){
 ?>
 <h2>Connexion</h2>
 <div>
-    <form  method="post" action="login.php">
+    <form  method="post" action="login.php" class="formRegister">
         <div>
-            <label for="email">Email</label>
-            <input type="email" name="email" id="email" placeholder="Votre email">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" name="email" id="email" placeholder="Votre email">
         </div>
-        <div>
-            <label for="password">Mot de passe</label>
-            <input type="password" name="password" id="password" placeholder="Votre mot de passe">
+        <div class="mb-3">
+            <label for="password" class="form-label">Mot de passe</label>
+            <input type="password" class="form-control" name="password" id="password" placeholder="Votre mot de passe">
         </div>
-        <div>
-            <button type="submit" value="Se connecter">Connexion</button>
+        <div class="mb-3">
+            <?php addCSRFTokenToForm() ?>
+            <button type="submit" class="btn-secondary px-5" value="Se connecter">Connexion</button>
         </div>
     </form>
 </div>

@@ -1,7 +1,7 @@
 <?php
 require_once ('lib/config.php');
 
-if (isset($_SESSION['user'])) {
+if (isset($_SESSION['user']) && ($_SESSION['user']['role'] === 'ROLE_ADMIN')) {
     ?>
         <?php foreach ($admin as $key => $value) { ?>
             <li class="nav-item <?php echo ($currentPage === $key) ? 'active' : ''; ?>">

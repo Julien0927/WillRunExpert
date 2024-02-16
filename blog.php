@@ -17,17 +17,16 @@ require_once 'templates/header.php';
 
 <?php foreach ($allArticles as $article) { ?>
 <div class="row d-flex justify-content-center mb-2">
-    <div class="col-md-10">
+    <div class="col-md-8">
       <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
         <div class="col p-4 d-flex flex-column position-static">
-          <strong class="d-inline-block mb-2 text-primary-emphasis">World</strong>
           <h3 class="mb-0"><?=($article["title"])?></h3>
           <div class="mb-1 text-body-secondary"><?=($article["date"])?></div>
-          <p class="card-text mb-auto"><?=($article["content"])?></p>
-          <a href="<?=($article["link"])?>" class="icon-link gap-1 icon-link-hover stretched-link">
-          Continuez la lecture
-            <!--<svg class="bi"><use xlink:href="#chevron-right"></use></svg>-->
+          <p class="card-text-blog mb-auto"><?=($article["content"])?></p>
+          <a href="<?=($article["link"])?>" class="icon-link gap-1 icon-link-hover stretched-link mt-2 mx-auto">
+            Lire plus...
           </a>
+          <div class="mx-auto"><a href=""><img src="/assets/icones/arrow-24.png" alt=""></a></div>
         </div>
         <div class="col-auto d-none d-lg-block">
         <img src="<?=($article["image"]) ?>" class="imgBlog" alt="Image">

@@ -88,25 +88,25 @@ else{
 <div>
     <?php require_once ('templates/messages.php'); ?>
 
-    <form  method="POST" action="register.php">
-        <div>
-            <label for="firstName">Prénom</label>
-            <input type="text" name="firstName" id="firstName" placeholder="Votre prénom">
+    <form  method="POST" action="register.php" class="formRegister">
+        <div class="mb-3">
+            <label for="firstName" class="form-label">Prénom</label>
+            <input type="text" class="form-control" name="firstName" id="firstName" placeholder="Votre prénom">
         </div>
-        <div>
-            <label for="lastName">Nom</label>
-            <input type="text" name="lastName" id="lastName" placeholder="Votre nom">
+        <div class="mb-3">
+            <label for="lastName" class="form-label">Nom</label>
+            <input type="text" class="form-control" name="lastName" id="lastName" placeholder="Votre nom">
         </div>
-        <div>
-            <label for="email">Email</label>
-            <input type="email" name="email" id="email" placeholder="Votre email">
+        <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" name="email" id="email" placeholder="Votre email">
         </div>
-        <div>
-            <label for="password">Mot de passe</label>
-            <input type="password" name="password" id="password" placeholder="Votre mot de passe">
+        <div class="mb-3">
+            <label for="password" class="form-label">Mot de passe</label>
+            <input type="password" class="form-control" name="password" id="password" placeholder="Votre mot de passe">
         </div>
-        <div>
-            <button type="submit" value="Se connecter">Connexion</button>
+        <div class="mb-3">
+            <button type="submit" class="btn-secondary px-5" value="S'inscrire">S'inscrire</button>
         </div>
     </form>
 </div>

@@ -52,12 +52,12 @@ require_once ('templates/header.php');
                     </thead>
                     <tbody>
                         <?php foreach ($allArticles as $article) { ?>
-                        <tr class="text-center">
+                        <tr class="text-start">
                             <td><?=($article["date"])?></td>
                             <td><?=($article["title"])?></td>
                             <td><?=($article["content"])?></td>
                             <td><?=($article["link"])?></td>
-                            <td><img src="<?=($article["image"])?>" style="width:10%; height:10%"></td>
+                            <td class="text-center"><img src="<?=($article["image"])?>" style="width:10%; height:10%"></td>
                             <td><input type="checkbox" name="articleBox[]" value="<?= $article['id'] ?>"></td>
                         </tr>
                         <?php } ?>
@@ -69,9 +69,8 @@ require_once ('templates/header.php');
     <div class="row">
         <div class="d-flex justify-content-end">
             <div class=" my-3">
-                <a href="addArticles.php" class="btn btn-primary">Ajouter un article</button></a>
-                <button type="submit" class="btn btn-danger" name="deleteArticle">Supprimer un article</button>
-                <button type="submit" class="btn btn-success">Modifier un article</button>
+                <a href="addArticles.php" class="btn btn-secondary">Ajouter un article</button></a>
+                <button type="submit" class="btn btn-original" name="deleteArticle">Supprimer</button>
             </div>
         </div>
     </div>

@@ -4,17 +4,20 @@ $tertiary-color: #027966;
 $tertiary1-color: hsla(170, 97%, 24%, 0.63);
 $quaternary-color: #F2F2F2;
 $quinary-color: #000000;
-$primary-font: 'Montserrat', sans-serif;
+/* $primary-font: 'Montserrat', sans-serif;*/
+$primary-font: 'Rajdhani', sans-serif;
+$secondary-font: 'barlow', sans-serif;
 
 //On empeche le scroll horizontal
 body{
+    width: 100%;
     overflow-x: hidden;
     font-family: $primary-font;
 }
 
 .nav-item{
     font-family: $primary-font;
-    font-size: 1.25rem;
+    font-size: 1rem;
     font-weight: 600;
     color: $quinary-color;
     padding: 0 1rem;
@@ -49,6 +52,10 @@ h1, h2, h3, h4{
     position: relative;
     height: 80vh;
     overflow: hidden;
+}
+
+.parallax-container p{
+    font-weight: bold;
 }
 
 @mixin parallax {
@@ -91,12 +98,14 @@ h1, h2, h3, h4{
 
 .parallax-text {
     position: absolute;
+    font-family: $primary-font;
     top: 30%;
     right: 0%;
     transform: translate(-50%, -50%);
     text-align: center;
     color: #fff;
 }
+
 .parallax-text-3 {
     position: absolute;
     top: 40%;
@@ -114,6 +123,8 @@ h1, h2, h3, h4{
 
 .imgAccueil, .imgAccueil2 {
     box-shadow: $quinary-color 0rem 0 1rem;
+    max-width: 100%;
+    max-height: 100%;
 }
 .imgAccueil {
     border-radius: 1rem 0 0 1rem;
@@ -123,8 +134,7 @@ h1, h2, h3, h4{
     border-radius: 0 1rem 1rem 0;
 }
 
-.btn-original{
-    background-color: $secondary-color;
+@mixin btn {
     border: none;
     border-radius: 0.5rem;
     padding: 0.5rem 1rem;
@@ -133,34 +143,56 @@ h1, h2, h3, h4{
     color: $quaternary-color;
     transition: all 0.3s ease-in-out;
 }
+.btn-original{
+    background-color: $secondary-color;
+    @include btn;}
+
+.btn-secondary {
+    background-color: $primary-color;
+    @include btn;
+}
+.btn-secondary:hover{
+    background-color: $secondary-color;
+    @include btn;
+}
+
+.btn-tertiary {
+    background-color: $tertiary-color;
+    @include btn;
+}
+
 
 .shadow {
-  filter: drop-shadow(20px -20px 0px  $primary-color);
+   /*filter: drop-shadow(20px -20px 0px  $primary-color);*/
+   border-radius: 25rem 0rem 0rem 25rem;
 }
 
 .formation {
     background-color: $secondary-color;
     font-family: $primary-font;
+    max-width: 60%;
     color: $quaternary-color;
-    border-radius: 0 1.5rem 1.5rem 0;
+    border-radius: 1.5rem 1.5rem 1.5rem 1.5rem;
     padding: 0.5rem;
     transition: all 0.3s ease-in-out;
-    margin-left: 90px;
 }
-
+/* 
 .formation p {
     margin-left: 90px; 
 }
 
-/*.card:hover {
+ *//*CARDS*/
+
+/* .card:hover {
     transform: scale(1.1);
     box-shadow: 0 0 1rem $primary-color;
-}*/
-
+}
+ */
 .card {
     background-color: $primary-color;
     font-family: $primary-font;
-    color: $quaternary-color;
+    font-weight: bold;
+    color: $quinary-color;
     border-radius: 1rem;
     padding: 1.5rem;
     width: 80%;
@@ -174,27 +206,68 @@ h1, h2, h3, h4{
     text-align: center;
 }
 
-.list-group{
+/*.list-group{
     border-radius: 0.5rem ;
+}*/
+
+.list-group-item{
+    background-color: $primary-color;
 }
 
-@mixin square {
-    width: 12em;
-    height: 12em;
-    color: $quaternary-color;
+#elements {
+    background-color: $secondary-color;
+}
+
+/*END OF CARDS*/
+
+/*.aside {
+    background-color: $secondary-color;
+    font-family: $primary-font;
+    color: $quinary-color;
+    border-radius: 0rem 1rem 1rem 0rem;
+    transition: all 0.3s ease-in-out;
+    @include center;
+}*/
+
+//Bouton carousel
+/* .carousel-control-prev-icon, .carousel-control-next-icon {
+    background-color: $secondary-color;
+    border-radius: 50%;
+    padding: 25px;
+}
+
+.carousel-control-prev {
+    justify-content: end;
+    margin-left: 70px;
+}
+
+.carousel-control-next {
+    justify-content:start;
+    margin-right: 70px;
+}
+*/
+
+.square {
+    color: $quinary-color;
     padding: 1rem;
     margin-bottom: 10px;
+    background-color: $tertiary-color;
 }
-.square1 {
+/* .square1 {
     background-color: $primary-color;
     @include square;
 }
 
 .square2 {
-    background-color: $tertiary-color;
+    background-color: $secondary-color;
     @include square;
 }
+ */
 
+ .formRegister{
+    width: 50%;
+    margin-left: 50px;
+ }
 .contact {
     background-color: $secondary-color;
     font-family: $primary-font;
@@ -205,10 +278,10 @@ h1, h2, h3, h4{
     transition: all 0.3s ease-in-out;
     @include center;
 }
-//Image blog
+//Images blog
 .imgBlog {
-    width: 100%;
-    height: 250px;
+    max-width: 300px;
+    max-height: 300px;
     object-fit: cover;
 }
 //Liste des articles
@@ -216,6 +289,11 @@ h1, h2, h3, h4{
     white-space: nowrap;
 }
 //Fin liste des articles
+
+//Texte blog
+.card-text-blog {
+    text-align: justify;
+}
 .footer{
     background-color: $secondary-color;
     color: $quaternary-color;

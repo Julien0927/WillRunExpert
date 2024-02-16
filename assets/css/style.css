@@ -1,11 +1,13 @@
+/* $primary-font: 'Montserrat', sans-serif;*/
 body {
+  width: 100%;
   overflow-x: hidden;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Rajdhani", sans-serif;
 }
 
 .nav-item {
-  font-family: "Montserrat", sans-serif;
-  font-size: 1.25rem;
+  font-family: "Rajdhani", sans-serif;
+  font-size: 1rem;
   font-weight: 600;
   color: #000000;
   padding: 0 1rem;
@@ -23,7 +25,7 @@ body {
 }
 
 h1, h2, h3, h4 {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Rajdhani", sans-serif;
   font-weight: bold;
   display: flex;
   justify-content: center;
@@ -35,6 +37,10 @@ h1, h2, h3, h4 {
   position: relative;
   height: 80vh;
   overflow: hidden;
+}
+
+.parallax-container p {
+  font-weight: bold;
 }
 
 .parallax-image {
@@ -93,6 +99,7 @@ h1, h2, h3, h4 {
 
 .parallax-text {
   position: absolute;
+  font-family: "Rajdhani", sans-serif;
   top: 30%;
   right: 0%;
   transform: translate(-50%, -50%);
@@ -116,6 +123,8 @@ h1, h2, h3, h4 {
 /* Fin Parallaxe */
 .imgAccueil, .imgAccueil2 {
   box-shadow: #000000 0rem 0 1rem;
+  max-width: 100%;
+  max-height: 100%;
 }
 
 .imgAccueil {
@@ -131,38 +140,76 @@ h1, h2, h3, h4 {
   border: none;
   border-radius: 0.5rem;
   padding: 0.5rem 1rem;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Rajdhani", sans-serif;
+  font-weight: bold;
+  color: #F2F2F2;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-secondary {
+  background-color: #6DB7C1;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  font-family: "Rajdhani", sans-serif;
+  font-weight: bold;
+  color: #F2F2F2;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-secondary:hover {
+  background-color: #FC5603;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  font-family: "Rajdhani", sans-serif;
+  font-weight: bold;
+  color: #F2F2F2;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-tertiary {
+  background-color: #027966;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  font-family: "Rajdhani", sans-serif;
   font-weight: bold;
   color: #F2F2F2;
   transition: all 0.3s ease-in-out;
 }
 
 .shadow {
-  filter: drop-shadow(20px -20px 0px #6DB7C1);
+  /*filter: drop-shadow(20px -20px 0px  $primary-color);*/
+  border-radius: 25rem 0rem 0rem 25rem;
 }
 
 .formation {
   background-color: #FC5603;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Rajdhani", sans-serif;
+  max-width: 60%;
   color: #F2F2F2;
-  border-radius: 0 1.5rem 1.5rem 0;
+  border-radius: 1.5rem 1.5rem 1.5rem 1.5rem;
   padding: 0.5rem;
   transition: all 0.3s ease-in-out;
-  margin-left: 90px;
 }
 
+/* 
 .formation p {
-  margin-left: 90px;
+    margin-left: 90px; 
 }
 
-/*.card:hover {
+ */ /*CARDS*/
+/* .card:hover {
     transform: scale(1.1);
     box-shadow: 0 0 1rem $primary-color;
-}*/
+}
+ */
 .card {
   background-color: #6DB7C1;
-  font-family: "Montserrat", sans-serif;
-  color: #F2F2F2;
+  font-family: "Rajdhani", sans-serif;
+  font-weight: bold;
+  color: #000000;
   border-radius: 1rem;
   padding: 1.5rem;
   width: 80%;
@@ -178,31 +225,67 @@ h1, h2, h3, h4 {
   text-align: center;
 }
 
-.list-group {
-  border-radius: 0.5rem;
+/*.list-group{
+    border-radius: 0.5rem ;
+}*/
+.list-group-item {
+  background-color: #6DB7C1;
 }
 
-.square1 {
-  background-color: #6DB7C1;
-  width: 12em;
-  height: 12em;
-  color: #F2F2F2;
+#elements {
+  background-color: #FC5603;
+}
+
+/*END OF CARDS*/
+/*.aside {
+    background-color: $secondary-color;
+    font-family: $primary-font;
+    color: $quinary-color;
+    border-radius: 0rem 1rem 1rem 0rem;
+    transition: all 0.3s ease-in-out;
+    @include center;
+}*/
+/* .carousel-control-prev-icon, .carousel-control-next-icon {
+    background-color: $secondary-color;
+    border-radius: 50%;
+    padding: 25px;
+}
+
+.carousel-control-prev {
+    justify-content: end;
+    margin-left: 70px;
+}
+
+.carousel-control-next {
+    justify-content:start;
+    margin-right: 70px;
+}
+*/
+.square {
+  color: #000000;
   padding: 1rem;
   margin-bottom: 10px;
+  background-color: #027966;
+}
+
+/* .square1 {
+    background-color: $primary-color;
+    @include square;
 }
 
 .square2 {
-  background-color: #027966;
-  width: 12em;
-  height: 12em;
-  color: #F2F2F2;
-  padding: 1rem;
-  margin-bottom: 10px;
+    background-color: $secondary-color;
+    @include square;
+}
+ */
+.formRegister {
+  width: 50%;
+  margin-left: 50px;
 }
 
 .contact {
   background-color: #FC5603;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Rajdhani", sans-serif;
   color: #F2F2F2;
   border-radius: 1rem 1rem 1rem 1rem;
   padding: 0.5rem;
@@ -214,14 +297,18 @@ h1, h2, h3, h4 {
 }
 
 .imgBlog {
-  width: 100%;
-  height: 250px;
+  max-width: 300px;
+  max-height: 300px;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
 .nowrap {
   white-space: nowrap;
+}
+
+.card-text-blog {
+  text-align: justify;
 }
 
 .footer {

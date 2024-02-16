@@ -5,6 +5,7 @@ require_once ('App/Articles.php');
 require_once ('lib/pdo.php');
 require_once ('lib/config.php');
 require_once ('lib/tools.php');
+require_once ('lib/security.php');
 
 
 $messages = [];
@@ -74,6 +75,7 @@ require_once ('templates/header.php');
             </div>
         </div>
         <div class="d-flex justify-content-center">
+        <?php addCSRFTokenToForm() ?>
         <button type="submit" class="btn btn-primary justify-content-center my-3" value="">Enregistrer</button>
         </div>
     </form>

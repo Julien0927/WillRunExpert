@@ -9,16 +9,17 @@ require_once 'templates/header.php';
 <div class="parallax-container">
     <div class="parallax-image"></div>
     <div class="parallax-text">
-        <p>Description ou autre phrase</p>
+        <p>Ne limite pas tes défis,<br>défis tes limites!</p>
     </div>
 </div>
-    <div class="row d-flex justify-content-center">
-        <div class="col-md-5">
-            <img src="assets/images/photo2.webp" class="img-fluid imgAccueil" alt="Coureurs">
+
+    <div class="row d-flex justify-content-center mb-5 mr-4">
+        <div class="col-md-4">
+            <img src="assets/images/photo2.webp" class="img-fluid imgAccueil ml-5" alt="Coureurs">
         </div>
         <div class="col-md-5">
-            <h2 class="mt-3">COACHING INDIVIDUEL</h2>
-            <p>
+            <h2 class="">COACHING INDIVIDUEL</h2>
+            <p class="" style="text-align: justify">
                 Au-delà d'un simple programme d'entraînement, 
                 je vous propose un suivi sportif complet pour vous accompagner vers vos objectifs 
                 en tenant compte de tous les éléments influant sur la performance. 
@@ -29,14 +30,14 @@ require_once 'templates/header.php';
                 de vos séances, permettant une amélioration de vos performances sans 
                 compromettre votre qualité de vie.
             </p>
-            <button class="btn-original" href="coaching.php">En savoir plus</button>
+            <a href="coaching.php"><button class="btn-original" >En savoir plus</button></a>
         </div>
     </div>
 
-    <div class="row d-flex justify-content-center">
+    <div class="row d-flex justify-content-center me-4">
         <div class="col-md-5">
-            <h2 class="mt-3">CONSULTING</h2>
-            <p class="">
+            <h2 class="">CONSULTING</h2>
+            <p class="ml-5" style="text-align: justify">
                 Au-delà d'un simple programme d'entraînement, 
                 je vous propose un suivi sportif complet pour vous accompagner vers vos objectifs 
                 en tenant compte de tous les éléments influant sur la performance. 
@@ -47,9 +48,9 @@ require_once 'templates/header.php';
                 de vos séances, permettant une amélioration de vos performances sans 
                 compromettre votre qualité de vie.
             </p>
-            <button class="btn-original" href="coaching.php">En savoir plus</button>
+            <a href="coaching.php"><button class="btn-original" >En savoir plus</button></a>
         </div>
-        <div class="col-md-5 mb-5">
+        <div class="col-md-4 mb-5">
             <img src="assets/images/photo1.webp" class="img-fluid imgAccueil2" alt="Coureurs">
         </div>
     </div>
