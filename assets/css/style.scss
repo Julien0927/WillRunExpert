@@ -134,6 +134,7 @@ h1, h2, h3, h4{
     border-radius: 0 1rem 1rem 0;
 }
 
+//Button
 @mixin btn {
     border: none;
     border-radius: 0.5rem;
@@ -159,6 +160,12 @@ h1, h2, h3, h4{
 .btn-tertiary {
     background-color: $tertiary-color;
     @include btn;
+}
+
+.btn-fixed {
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
 }
 
 
@@ -253,21 +260,12 @@ h1, h2, h3, h4{
     margin-bottom: 10px;
     background-color: $tertiary-color;
 }
-/* .square1 {
-    background-color: $primary-color;
-    @include square;
-}
-
-.square2 {
-    background-color: $secondary-color;
-    @include square;
-}
- */
 
  .formRegister{
     width: 50%;
     margin-left: 50px;
  }
+ 
 .contact {
     background-color: $secondary-color;
     font-family: $primary-font;
@@ -278,22 +276,42 @@ h1, h2, h3, h4{
     transition: all 0.3s ease-in-out;
     @include center;
 }
+
+/*BLOG*/
+
+.card-blog {
+    position: relative;
+    font-family: $secondary-font;
+    border-radius: 1rem;
+    border: 1px solid $quinary-color;
+    padding: 0.5rem;
+    text-align: justify;
+}
 //Images blog
 .imgBlog {
-    max-width: 300px;
-    max-height: 300px;
+    width: 100%;
+    max-width: 500px;
+    height: 150px;
+    border-radius: 1rem 1rem 1rem 1rem;
     object-fit: cover;
 }
-//Liste des articles
-.nowrap {
-    white-space: nowrap;
-}
-//Fin liste des articles
 
 //Texte blog
 .card-text-blog {
     text-align: justify;
+    margin-bottom: 4rem;
 }
+
+//Image modal
+.imgModal {
+    width: 100%;
+    max-width: 500px;
+    height: 300px;
+    border-radius: 1rem 1rem 1rem 1rem;
+    object-fit: cover;
+}
+
+//Footer
 .footer{
     background-color: $secondary-color;
     color: $quaternary-color;

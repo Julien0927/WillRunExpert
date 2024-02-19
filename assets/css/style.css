@@ -179,6 +179,12 @@ h1, h2, h3, h4 {
   transition: all 0.3s ease-in-out;
 }
 
+.btn-fixed {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+}
+
 .shadow {
   /*filter: drop-shadow(20px -20px 0px  $primary-color);*/
   border-radius: 25rem 0rem 0rem 25rem;
@@ -268,16 +274,6 @@ h1, h2, h3, h4 {
   background-color: #027966;
 }
 
-/* .square1 {
-    background-color: $primary-color;
-    @include square;
-}
-
-.square2 {
-    background-color: $secondary-color;
-    @include square;
-}
- */
 .formRegister {
   width: 50%;
   margin-left: 50px;
@@ -296,19 +292,37 @@ h1, h2, h3, h4 {
   align-items: center;
 }
 
+/*BLOG*/
+.card-blog {
+  position: relative;
+  font-family: "barlow", sans-serif;
+  border-radius: 1rem;
+  border: 1px solid #000000;
+  padding: 0.5rem;
+  text-align: justify;
+}
+
 .imgBlog {
-  max-width: 300px;
-  max-height: 300px;
+  width: 100%;
+  max-width: 500px;
+  height: 150px;
+  border-radius: 1rem 1rem 1rem 1rem;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
-.nowrap {
-  white-space: nowrap;
-}
-
 .card-text-blog {
   text-align: justify;
+  margin-bottom: 4rem;
+}
+
+.imgModal {
+  width: 100%;
+  max-width: 500px;
+  height: 300px;
+  border-radius: 1rem 1rem 1rem 1rem;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .footer {

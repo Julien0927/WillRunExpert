@@ -50,7 +50,7 @@ const services = [
     
         {
             icon: 'coureur-24.png',
-            title: 'Ajustement du plan d\'entrainement (VMA, nombre de séance par semaine,...)',
+            title: 'Ajustement du plan d\'entrainement(VMA, nombre de séance par semaine,...)',
         },
     
         
@@ -183,9 +183,8 @@ experiences.forEach(experience => {
     const li = document.createElement('li');
     li.innerHTML = `<p><strong>${experience.year}</strong> ${experience.title}</p>`;
     ulExperiences.appendChild(li);
+    
 });
-
-/*Affiche l'intégralité de l'article*/ 
 
 
 });

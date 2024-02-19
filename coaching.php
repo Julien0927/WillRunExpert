@@ -77,30 +77,30 @@ require_once 'templates/header.php';
 <!-- <div class="container">-->
 <div class="container-fluid mt-5">
     <div class="row justify-content-center mb-5">
-        <div class="d-flex justify-content-evenly col-md-12 col-sm-6 square">
+        <div class="d-flex justify-content-center gap-5 col-md-12 col-sm-6 square">
             <div class="flex-column text-center">
-                <img src="assets/icones/black-gourou-100.png" class="mb-2" alt="plaisir bien-être">
-                <h3>Bien-être</h3>
+                <img src="assets/icones/black-gourou-75.png" class="mb-2" alt="plaisir bien-être">
+                <h4>Bien-être</h4>
             </div>
             <div class="flex-column text-center">
-                <img src="assets/icones/black-confiance-100.png" class="mb-2" alt="confiance">
-                <h3>Confiance</h3>
+                <img src="assets/icones/black-confiance-75.png" class="mb-2" alt="confiance">
+                <h4>Confiance</h4>
             </div>
             <div class="flex-column text-center">
-                <img src="assets/icones/black-experience-100.png" class="mb-2" alt="experience">
-                <h3>Expérience</h3>
+                <img src="assets/icones/black-experience-75.png" class="mb-2" alt="experience">
+                <h4>Expérience</h4>
             </div>
             <div class="flex-column text-center">
-                <img src="assets/icones/black-ecoute-100.png" class="mb-2" alt="ecoute">
-                <h3>Ecoute</h3>
+                <img src="assets/icones/black-ecoute-75.png" class="mb-2" alt="ecoute">
+                <h4>Ecoute</h4>
             </div>
             <div class="flex-column text-center">
-                <img src="assets/icones/black-discipline-100.png" class="mb-2" alt="discipline">
-                <h3>Discipline</h3>
+                <img src="assets/icones/black-discipline-75.png" class="mb-2" alt="discipline">
+                <h4>Discipline</h4>
             </div>
             <div class="flex-column text-center">
-                <img src="assets/icones/black-prevention-100.png" class="mb-2" alt="prevention">
-                <h3>Prévention</h3>
+                <img src="assets/icones/black-prevention-75.png" class="mb-2" alt="prevention">
+                <h4>Prévention</h4>
             </div>
         </div>
     </div>

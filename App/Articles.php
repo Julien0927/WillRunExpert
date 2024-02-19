@@ -109,11 +109,12 @@ class Articles {
     
         return $articles;
     }
-    
+
+
+    //Fonction permettant de formater la date
     private function formatDate(string $date): string {
         return date('d/m/Y', strtotime($date));
     }
-    //Fonction permettant d'afficher l'article complet
 
     //Fonction permmettant de modifier un article
     public function updateArticle(): void {
