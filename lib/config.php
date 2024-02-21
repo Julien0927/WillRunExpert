@@ -1,5 +1,5 @@
 <?php
-define ('_ARTICLES_IMG_PATH_', 'uploads');
+define ('_ARTICLES_IMG_PATH_', 'uploads/');
 
 $menu = [
     'index.php' => 'Accueil',
@@ -16,4 +16,5 @@ $admin = [
     'coaching.php' => 'Coaching',
     'blog.php' => 'Blog',
     'articles.php' => 'Articles',
+    'users.php' => 'Utilisateurs',
 ];

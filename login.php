@@ -39,54 +39,18 @@ if(!empty($_POST)){
         }
     }
 }
-        //On verifie que l'email est valide
-       /*  if(!filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)){
-            die("L'email n'est pas valide");
-        }
-
-        //On se connecte à la base de données
-        require_once 'connect.php';
-
-        $slq = "SELECT * FROM `users` WHERE email = :email";
-        $query = $db->prepare($slq);
-        $query->bindValue(":email", $_POST["email"], PDO::PARAM_STR);
-        $query->execute();
-        $user = $query->fetch();
-        
-        if($user){
-            die("Identifiants invalides");
-        }
-        // Ici on a un user existant, on vérifie le mot de passe
-        else{
-            //On verifie le mot de passe
-            if(!password_verify($_POST["password"], $user["password"])){
-                die ("Identifiants invalides");
-            }
-
-            //Ici mot de passe et l'utilisateur sont valides
-            //On va pouvoir connecter l'utilisateur
-            //On démarre la session PHP
-            session_start();
-
-            //On stocke dans $_SESSION les informations de l'utilisateur
-            $_SESSION["user"] = [
-                "id" => $user["id"],
-                "email" => $user["email"],
-                "roles" => $user["roles"]
-            ];
-            //On peut rediriger l'utilisateur vers la page d'accueil
-            header("Location: index.php");
-            }
-        }
-}
-
- */
 
  require_once ('templates/header.php');
 
 ?>
-<h2>Connexion</h2>
-<div>
+<div class="parallax-container">
+    <div class="parallax-image-8"></div>
+    <div class="parallax-text-3">
+        <p>CONNEXION</p>
+    </div>
+</div>
+
+<div class="formCenter mt-0">
     <form  method="post" action="login.php" class="formRegister">
         <div>
             <label for="email" class="form-label">Email</label>
@@ -96,7 +60,7 @@ if(!empty($_POST)){
             <label for="password" class="form-label">Mot de passe</label>
             <input type="password" class="form-control" name="password" id="password" placeholder="Votre mot de passe">
         </div>
-        <div class="mb-3">
+        <div class="formCenter mb-3">
             <?php addCSRFTokenToForm() ?>
             <button type="submit" class="btn-secondary px-5" value="Se connecter">Connexion</button>
         </div>

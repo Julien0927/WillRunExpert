@@ -42,9 +42,7 @@ require_once 'templates/header.php';
             Cabinet de kinésithérapie IR2S - La Rochelle<br> rue des Trois Frères 17000 La Rochelle
         </div>
     </div>
-    <div class="d-flex justify-content-center mt-3 mb-5">
-        <a class="btn btn-tertiary fw-bold px-3" href="https://calendly.com/willrunexpert" role="button"><img src="assets/icones/calendrier-24.png" class="me-3" alt="bouton rendez-vous">PRENDRE RENDEZ-VOUS EN VISIO</a>
-    </div>
+    <?php require_once ('templates/rdvVisio.php')?>
         <!--<form method="post">
         <div>
             <label for="name">Nom</label>

@@ -23,7 +23,7 @@
         <div class="modal-body">
           <img src="<?=($article['image'])?>" class="imgModal" alt="">
         <?php
-        // Supposons que vous ayez passé l'ID de l'article à cette page/script
+        
         $fullArticle = $articles->getArticleById($article['id']);
         echo $fullArticle['content']; // Affiche le contenu complet
         ?>

@@ -24,6 +24,12 @@ body {
           text-decoration: underline #FC5603 0.3rem;
 }
 
+.formCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 h1, h2, h3, h4 {
   font-family: "Rajdhani", sans-serif;
   font-weight: bold;
@@ -90,6 +96,24 @@ h1, h2, h3, h4 {
 
 .parallax-image-6 {
   background-image: url("../images/blog.webp");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Important pour l'effet de parallaxe */
+  height: 80%;
+  width: 100%;
+}
+
+.parallax-image-7 {
+  background-image: url("../images/run.webp");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Important pour l'effet de parallaxe */
+  height: 80%;
+  width: 100%;
+}
+
+.parallax-image-8 {
+  background-image: url("../images/team.webp");
   background-size: cover;
   background-position: center;
   background-attachment: fixed; /* Important pour l'effet de parallaxe */
@@ -211,6 +235,35 @@ h1, h2, h3, h4 {
     box-shadow: 0 0 1rem $primary-color;
 }
  */
+/* .borderText {
+    border: 3px solid $secondary-color;
+    border-radius: 2rem;
+    margin-left: 18rem;
+    margin-right: 18rem;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}*/
+.line {
+  background-image: linear-gradient(to right, white 1%, #FC5603 38%, white 38%, white 62%, #FC5603 62%, white 99%);
+  height: 0.2rem;
+  margin-left: 22rem;
+  margin-right: 22rem;
+}
+
+.line2 {
+  background-image: linear-gradient(to right, white 1%, #FC5603 39%, white 39%, white 61%, #FC5603 61%, white 99%);
+  height: 0.2rem;
+  margin-left: 22rem;
+  margin-right: 22rem;
+}
+
+.line3 {
+  background-image: linear-gradient(to right, white 1%, #FC5603 25%, white 25%, white 75%, #FC5603 75%, white 99%);
+  height: 0.2rem;
+  margin-left: 22rem;
+  margin-right: 22rem;
+}
+
 .card {
   background-color: #6DB7C1;
   font-family: "Rajdhani", sans-serif;
@@ -323,6 +376,10 @@ h1, h2, h3, h4 {
   border-radius: 1rem 1rem 1rem 1rem;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.allArticles {
+  vertical-align: middle;
 }
 
 .footer {

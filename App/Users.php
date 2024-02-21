@@ -7,6 +7,7 @@ use PDOException;
 
 class Users {
     private PDO $db;
+    private int $id;
     private string $firstName;
     private string $lastName;
     private string $email;
@@ -113,6 +114,18 @@ class Users {
 
     const ROLE_USER = "ROLE_USER";
     const ROLE_ADMIN = "ROLE_ADMIN";
+
+//Fonction permettant de recuperer les informations de l'utilisateur
+    public function getAllUsers() {
+        $query = $this->db->prepare("SELECT * FROM `users` ORDER BY `lastName` ASC");
+        $query->execute();
+        return $query->fetchAll();
+    }
+
+    public function logout() {
+        session_start();
+        session_destroy();
+    }
 }
 
 

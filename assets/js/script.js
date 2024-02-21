@@ -8,7 +8,7 @@ const services = [
 
     {
         icon: 'coureur-24.png',
-        title: 'Ajustement du plan d\'entrainement<br>(VMA, nombre de séance par semaine,...)',
+        title: 'Ajustement du plan d\'entrainement',
     },
 
     
@@ -50,7 +50,7 @@ const services = [
     
         {
             icon: 'coureur-24.png',
-            title: 'Ajustement du plan d\'entrainement(VMA, nombre de séance par semaine,...)',
+            title: 'Ajustement du plan d\'entrainement',
         },
     
         
@@ -186,6 +186,26 @@ experiences.forEach(experience => {
     
 });
 
-
 });
 
+//Fonction qui permet de transformer les saisies (1ere lettre majuscule, le reste en minuscule)
+const firstNameInput = document.getElementById('firstName');
+const lastNameInput = document.getElementById('lastName');
+
+const formatNameInput = (inputElement) => {
+    const inputValue = inputElement.value.trim();
+    const words = inputValue.split(' ');
+
+const formattedWords = words.map(word => {
+    return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
+});
+    inputElement.value = formattedWords.join(' ');
+};
+
+firstNameInput.addEventListener('blur', () => {
+    formatNameInput(firstNameInput);
+});
+
+lastNameInput.addEventListener('blur', () => {
+    formatNameInput(lastNameInput);
+});

@@ -46,17 +46,15 @@ require_once ('templates/header.php');
                             <th>Date</th>
                             <th>Titre</th>
                             <th>Contenu</th>
-                            <th>Lien</th>
                             <th>Image</th>
                         </tr>
                     </thead>
                     <tbody>
                         <?php foreach ($allArticles as $article) { ?>
-                        <tr class="text-start">
+                        <tr class="allArticles text-start">
                             <td><?=($article["date"])?></td>
                             <td><?=($article["title"])?></td>
                             <td><?=($article["content"])?></td>
-                            <td><?=($article["link"])?></td>
                             <td class="text-center"><img src="<?=($article["image"])?>" style="width:10%; height:10%"></td>
                             <td><input type="checkbox" name="articleBox[]" value="<?= $article['id'] ?>"></td>
                         </tr>

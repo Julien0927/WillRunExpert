@@ -33,6 +33,12 @@ body{
     text-decoration: underline $secondary-color 0.3rem;
 }
 
+.formCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 @mixin center {
     display: flex;
     justify-content: center;
@@ -92,6 +98,15 @@ h1, h2, h3, h4{
 
 .parallax-image-6 {
     background-image: url('../images/blog.webp'); 
+@include parallax;
+}
+.parallax-image-7 {
+    background-image: url('../images/run.webp'); 
+@include parallax;
+}
+
+.parallax-image-8 {
+    background-image: url('../images/team.webp'); 
 @include parallax;
 }
 
@@ -195,7 +210,36 @@ h1, h2, h3, h4{
     box-shadow: 0 0 1rem $primary-color;
 }
  */
-.card {
+/* .borderText {
+    border: 3px solid $secondary-color;
+    border-radius: 2rem;
+    margin-left: 18rem;
+    margin-right: 18rem;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}*/
+
+.line {
+    background-image: linear-gradient(to right, white 1%, $secondary-color 38%, white 38%, white 62%, $secondary-color 62%, white 99%);
+    height: 0.2rem;
+    margin-left: 22rem;
+    margin-right: 22rem;
+}
+
+.line2 {
+    background-image: linear-gradient(to right,white 1%, $secondary-color 39%, white 39%, white 61%, $secondary-color 61%, white 99%);
+    height: 0.2rem;
+    margin-left: 22rem;
+    margin-right: 22rem;
+}
+
+.line3 {
+    background-image: linear-gradient(to right,white 1%, $secondary-color 25%, white 25%, white 75%, $secondary-color 75%, white 99%);
+    height: 0.2rem;
+    margin-left: 22rem;
+    margin-right: 22rem;
+}
+ .card {
     background-color: $primary-color;
     font-family: $primary-font;
     font-weight: bold;
@@ -309,6 +353,11 @@ h1, h2, h3, h4{
     height: 300px;
     border-radius: 1rem 1rem 1rem 1rem;
     object-fit: cover;
+}
+
+//Users
+.allArticles {
+    vertical-align: middle;
 }
 
 //Footer
