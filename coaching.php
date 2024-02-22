@@ -34,14 +34,14 @@ require_once 'templates/header.php';
                 <h3 class="card-title text-center">FORMULE ESSENTIEL</h3>
                 <h3 class="card-text text-center">70€ / mois</h3>
             </div>
-                <ul class="list-group list-group-flush services mb-5" id=""></ul>
+                <ul class="list-group list-group-flush services mb-5"></ul>
         </div>
         <div class="card m-0" style="width: 25rem;">
             <div class="card-body">
                 <h3 class="card-title text-center">FORMULE PREMIUM</h3>
                 <h3 class="card-text text-center">120€ / mois</h3>
             </div>
-            <ul class="list-group list-group-flush servicesPremium" id=""></ul>
+            <ul class="list-group list-group-flush servicesPremium"></ul>
         </div>
 </div>
     <h2 class="line3 mb-3">Pour atteindre votre objectif</h2>
@@ -52,7 +52,7 @@ require_once 'templates/header.php';
             <h3 class="card-text text-center">3 mois</h3>
             <h3 class="card-text text-center">200€</h3>
         </div>
-        <ul class="list-group list-group-flush services" id=""></ul>
+        <ul class="list-group list-group-flush services"></ul>
     </div>
     <div class="card m-0" style="width: 25rem;">
         <div class="card-body">
@@ -60,7 +60,7 @@ require_once 'templates/header.php';
             <h3 class="card-text text-center">6 mois</h3>
             <h3 class="card-text text-center">300€</h3>
         </div>
-        <ul class="list-group list-group-flush services" id=""></ul>
+        <ul class="list-group list-group-flush services"></ul>
     </div>
 
 </div>

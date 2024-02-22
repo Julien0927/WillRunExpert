@@ -22,9 +22,9 @@ try {
 } */
 
 try {
-    $db = new PDO('mysql:host=mysql-julienvarachas.alwaysdata.net; dbname=julienvarachas_willrunexpert;port=3306; charset=utf8mb4','327887', 'T0mEmm@1114');
+    
 
-/*$pdo = new PDO ('mysql:host=localhost; dbname=julienvarachas_garage-parrot; port=3306; charset=utf8mb4', 'root', '');*/
+/*$pdo = new PDO ('mysql:host=localhost; dbname=julienvarachas_; port=3306; charset=utf8mb4', 'root', '');*/
 $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 } 
