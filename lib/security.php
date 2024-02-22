@@ -42,3 +42,20 @@ set_exception_handler(function(Exception $e){
 		exit();
 });
 restore_exception_handler();
+
+// Fonction pour nettoyer les entrées utilisateur
+function sanitizeUserInput($input) {
+    if (is_string($input)) {
+        return htmlspecialchars(trim($input), ENT_QUOTES, 'UTF-8');
+    }
+    return $input;
+}
+// Nettoyer toutes les données POST
+foreach ($_POST as $key => $value) {
+    $_POST[$key] = sanitizeUserInput($value);
+}
+
+// Nettoyer toutes les données GET (si nécessaire)
+foreach ($_GET as $key => $value) {
+    $_GET[$key] = sanitizeUserInput($value);
+}

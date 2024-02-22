@@ -2,7 +2,7 @@
 
 require_once ('templates/header.php');
 require_once ('lib/pdo.php');
-require_once ('App/users.php');
+require_once ('App/Users.php');
 require_once ('lib/security.php');
 
 $messages = [];

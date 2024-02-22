@@ -4,7 +4,6 @@ $tertiary-color: #027966;
 $tertiary1-color: hsla(170, 97%, 24%, 0.63);
 $quaternary-color: #F2F2F2;
 $quinary-color: #000000;
-/* $primary-font: 'Montserrat', sans-serif;*/
 $primary-font: 'Rajdhani', sans-serif;
 $secondary-font: 'barlow', sans-serif;
 
@@ -219,26 +218,26 @@ h1, h2, h3, h4{
     padding-bottom: 8px;
 }*/
 
-.line {
-    background-image: linear-gradient(to right, white 1%, $secondary-color 38%, white 38%, white 62%, $secondary-color 62%, white 99%);
+@mixin line {
     height: 0.2rem;
     margin-left: 22rem;
     margin-right: 22rem;
+}
+.line {
+    background-image: linear-gradient(to right, white 1%, $secondary-color 38%, white 38%, white 62%, $secondary-color 62%, white 99%);
+    @include line;
 }
 
 .line2 {
     background-image: linear-gradient(to right,white 1%, $secondary-color 39%, white 39%, white 61%, $secondary-color 61%, white 99%);
-    height: 0.2rem;
-    margin-left: 22rem;
-    margin-right: 22rem;
+@include line;
 }
 
 .line3 {
     background-image: linear-gradient(to right,white 1%, $secondary-color 25%, white 25%, white 75%, $secondary-color 75%, white 99%);
-    height: 0.2rem;
-    margin-left: 22rem;
-    margin-right: 22rem;
+@include line;
 }
+
  .card {
     background-color: $primary-color;
     font-family: $primary-font;
@@ -358,6 +357,40 @@ h1, h2, h3, h4{
 //Users
 .allArticles {
     vertical-align: middle;
+}
+
+//Animation connexion
+.session_effect {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+.item {
+    font-size:8em;
+    color: $secondary-color;
+    animation-name: focus-in-contract;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: none;
+        
+    /* shorthand
+    animation: focus-in-contract 1s linear 0s 1 normal none;*/
+}
+@keyframes focus-in-contract {
+        
+    0% {
+        letter-spacing:1em;
+        filter:blur(12px);
+        opacity:0;
+    }
+    100% {
+        filter:blur(0);
+        opacity:1;
+    }
 }
 
 //Footer

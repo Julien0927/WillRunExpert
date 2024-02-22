@@ -16,14 +16,14 @@ require_once ('templates/header.php');
             <h5>WillRunExpert</h5>
             <li>Rue des Trois Frères Bât. C</li>
             <li>17000 La Rochelle</li>
-            <li><img src="assets/icones/phone-16.png"> 06 09 33 00 93</li>
-            <li><img src="assets/icones/courrier-16.png">willy.physio@gmail.com</li>
+            <li><img src="assets/icones/phone-16.png" alt="telephone"> 06 09 33 00 93</li>
+            <li><img src="assets/icones/courrier-16.png" alt="email">willy.physio@gmail.com</li>
             </ul>
         </div>
 
         <ul class="nav col-md-4 justify-content-center align-items-center text-center gap-3">
-            <a href="" title="facebook WillRunExpert"><img src="assets/icones/facebook.png"></a>
-            <a href="https://www.instagram.com/willrunexpert/" title="instagram WillRunExpert"><img src="assets/icones/instagram.png"></a>
+            <a href="" title="facebook WillRunExpert"><img src="assets/icones/facebook.png" alt="lien FaceBook"></a>
+            <a href="https://www.instagram.com/willrunexpert/" title="instagram WillRunExpert"><img src="assets/icones/instagram.png" alt="lien Instagram"></a>
         </ul>
     </footer>
 </body>

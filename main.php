@@ -1,6 +1,14 @@
 <?php
-require_once 'templates/header.php';
-?>
+require_once ('templates/header.php');
+require_once ('App/Users.php');
+
+  if(isset($_SESSION['user']) && $_SESSION['user']['role'] === 'ROLE_ADMIN'){?>
+    <div class="session-effect">
+      <div class="item">
+      <h5 class="text-center">Bonjour Willy.</h5>
+      </div>
+    </div>
+  <?php } ?>
 
 <div class="center">
         <h2 class="mb-3">COACHING COURSE À PIED</h2>

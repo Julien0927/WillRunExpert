@@ -49,7 +49,7 @@ $currentPage = basename($_SERVER['SCRIPT_NAME']);
                 <a class="btn btn-original me-5" href="logout.php">Se déconnecter</a>
                 <?php } else { ?>
                   <a class="nav-link" href="login.php" >
-                    <img src="assets/icones/cadenas-orange-24.png" class="mx-5"/>
+                    <img src="assets/icones/cadenas-orange-24.png" class="mx-5" alt="connexion"/>
                   </a>
               <?php } ?>
             </div>
