@@ -2,7 +2,7 @@
     
 <div class="d-flex justify-content-evenly col-md-4 mb-5">
     <div class="card-blog" style="width: 25rem;">
-      <img src="<?=($article["image"]) ?>" class="card-img-top imgBlog" alt="...">
+      <img src="<?=($article["image"]) ?>" class="card-img-top imgBlog" alt="image article">
       <div class="card-body">
         <h5 class="card-title"><?=($article["title"])?></h5>
         <p class="card-text-date ms-2"><?=($article["date"])?></p>
@@ -21,15 +21,16 @@
         </div>
         <p class="ms-3"><?=($article["date"])?></p>
         <div class="modal-body">
-          <img src="<?=($article['image'])?>" class="imgModal" alt="">
+          <img src="<?=($article['image'])?>" class="imgModal" alt="Image article">
         <?php
         
         $fullArticle = $articles->getArticleById($article['id']);
         echo $fullArticle['content']; // Affiche le contenu complet
         ?>
         </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary px-5" data-bs-dismiss="modal">Close</button>
+        <div class="modal-footer d-flex justify-content-center gap-5">
+          <img src="assets/images/logo2.png" style="width: 30% ; height: 30%" alt="logo WillRunExpert">
+          <button type="button" class="btn btn-secondary px-5 ms-5" data-bs-dismiss="modal">Close</button>
         </div>
       </div>
   </div>

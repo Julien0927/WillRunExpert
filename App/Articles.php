@@ -11,8 +11,8 @@ class Articles {
     private string $title;
     private string $content;
     private string $image;
-    private string $link;
     private string $date;
+    private int $articlesParPage = 6;
 
     public function __construct(PDO $db) {
         $this->db = $db;
@@ -34,9 +34,6 @@ class Articles {
         $this->image = $image;
     }
 
-    public function setLink(string $link) {
-        $this->link = $link;
-    }
     //Fonction permettant de recuperer la date et de la mettre au format date
     public function setDate(string $date) {
         $this->date = $date;
@@ -58,10 +55,6 @@ class Articles {
         return $this->image;
     }
 
-    public function getLink(): ? string {
-        return $this->link;
-    }
-
     public function getDate(): string {
         return $this->date;
     }
@@ -78,19 +71,18 @@ class Articles {
     //Fonction d'ajouter un article
     public function addArticle(): void {
 
-        $sql = "INSERT INTO `articles`(`title`, `content`, `image`, `link`, `date`) VALUES (:title, :content, :image, :link, :date)";
+        $sql = "INSERT INTO `articles`(`title`, `content`, `image`, `date`) VALUES (:title, :content, :image, :date)";
         $query = $this->db->prepare($sql);
 
         $query->bindValue(":title", $this->title, PDO::PARAM_STR);
         $query->bindValue(":content", $this->content, PDO::PARAM_STR);
         $query->bindValue(":image", $this->image, PDO::PARAM_STR);
-        $query->bindValue(":link", $this->link, PDO::PARAM_STR);
         $query->bindValue(":date", $this->date, PDO::PARAM_STR);
 
        $query->execute();
     }
 
-    //Fonction permettant de recuperer tous les articles
+     //Fonction permettant de recuperer tous les articles
     public function getAllArticles() {
         $sql = "SELECT * FROM `articles` ORDER BY `date` DESC";
         $query = $this->db->prepare($sql);
@@ -110,7 +102,7 @@ class Articles {
         return $articles;
     }
 
-
+ 
     //Fonction permettant de formater la date
     private function formatDate(string $date): string {
         return date('d/m/Y', strtotime($date));
@@ -118,13 +110,12 @@ class Articles {
 
     //Fonction permmettant de modifier un article
     public function updateArticle(): void {
-        $sql = "UPDATE `articles` SET `title`=:title,`content`=:content,`image`=:image,`link`=:link,`date`=:date WHERE id=:id";
+        $sql = "UPDATE `articles` SET `title`=:title,`content`=:content,`image`=:image,`date`=:date WHERE id=:id";
         $query = $this->db->prepare($sql);
 
         $query->bindValue(":title", $this->title, PDO::PARAM_STR);
         $query->bindValue(":content", $this->content, PDO::PARAM_STR);
         $query->bindValue(":image", $this->image, PDO::PARAM_STR);
-        $query->bindValue(":link", $this->link, PDO::PARAM_STR);
         $query->bindValue(":date", $this->date, PDO::PARAM_STR);
         $query->bindValue(":id", $this->id, PDO::PARAM_INT);
 
@@ -151,5 +142,33 @@ class Articles {
         $query->execute();
     }
 
+    // Méthode pour obtenir le nombre total de pages
+    public function getTotalPages(): int {
+        $stmt = $this->db->query("SELECT COUNT(*) FROM articles");
+        $totalArticles = $stmt->fetchColumn();
+        return ceil($totalArticles / $this->articlesParPage);
+    }
+
+    // Méthode pour récupérer les articles pour une page donnée
+    public function getArticlesByPage(int $pageActuelle = 1): array {
+        $offset = ($pageActuelle - 1) * $this->articlesParPage;
+        $sql = "SELECT * FROM articles ORDER BY date DESC LIMIT :limit OFFSET :offset";
+        $stmt = $this->db->prepare($sql);
+        $stmt->bindValue(':limit', $this->articlesParPage, PDO::PARAM_INT);
+        $stmt->bindValue(':offset', $offset, PDO::PARAM_INT);
+        $stmt->execute();
+        $articles = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+        //Formatage de la date
+        foreach ($articles as $key => $article) {
+            $articles[$key]['date'] = $this->formatDate($article['date']);
+
+            if (strlen($article['content']) > 100) {
+                $articles[$key]['content'] = substr($article['content'], 0, 100) . '...';
+            }
+        }
+    
+        return $articles;
+    }
 
 }

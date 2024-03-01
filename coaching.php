@@ -29,14 +29,14 @@ require_once 'templates/header.php';
 
 <h2 class="line2 mt-5">Suivi annuel</h2>
 <div class="row d-flex justify-content-center gap-3 mt-5 mb-5">
-        <div class="card m-0" style="width: 25rem;">
+        <div class="card m-0" style="width: 24rem;">
             <div class="card-body">
                 <h3 class="card-title text-center">FORMULE ESSENTIEL</h3>
                 <h3 class="card-text text-center">70€ / mois</h3>
             </div>
                 <ul class="list-group list-group-flush services mb-5"></ul>
         </div>
-        <div class="card m-0" style="width: 25rem;">
+        <div class="card m-0" style="width: 24rem;">
             <div class="card-body">
                 <h3 class="card-title text-center">FORMULE PREMIUM</h3>
                 <h3 class="card-text text-center">120€ / mois</h3>
@@ -46,7 +46,7 @@ require_once 'templates/header.php';
 </div>
     <h2 class="line3 mb-3">Pour atteindre votre objectif</h2>
 <div class="row d-flex justify-content-center gap-3 mt-5 mb-5">
-    <div class="card m-0" style="width: 25rem;">
+    <div class="card m-0" style="width: 24rem;">
         <div class="card-body">
             <h3 class="card-title text-center">FORMULE SPRINT</h3>
             <h3 class="card-text text-center">3 mois</h3>
@@ -54,7 +54,7 @@ require_once 'templates/header.php';
         </div>
         <ul class="list-group list-group-flush services"></ul>
     </div>
-    <div class="card m-0" style="width: 25rem;">
+    <div class="card m-0" style="width: 24rem;">
         <div class="card-body">
             <h3 class="card-title text-center">FORMULE ENDURANCE</h3>
             <h3 class="card-text text-center">6 mois</h3>

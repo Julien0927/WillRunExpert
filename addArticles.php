@@ -13,7 +13,7 @@ $errors = [];
 require_once ('templates/messages.php');
 
 if(!empty($_POST)){
-    if(isset($_POST["title"], $_POST["content"], $_POST["link"], $_POST["date"])
+    if(isset($_POST["title"], $_POST["content"], $_POST["date"])
         && !empty($_POST["title"]) && !empty($_POST["content"]) && !empty($_POST["date"])){
 
         if (!empty($_FILES['image']['tmp_name'])) {
@@ -30,16 +30,15 @@ if(!empty($_POST)){
         }
 
         $articles = new App\Articles\Articles($db);
-
-        $_SESSION['messages'] = ["Votre article a bien été enregistré"];
-        header("Location: addArticles.php");
-
         $articles->setTitle($_POST["title"]);
         $articles->setContent($_POST["content"]);
         $articles->setImage(isset($imagePath) ? $imagePath : null);
-        $articles->setLink($_POST["link"]);
         $articles->setDate($_POST["date"]);
         $articles->addArticle();
+        
+        $_SESSION['messages'] = ["Votre article a bien été enregistré"];
+        header("Location: addArticles.php");
+        exit();
 
         // Redirection ou affichage des messages ici
     } else {

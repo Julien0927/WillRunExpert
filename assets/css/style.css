@@ -229,9 +229,9 @@ h1, h2, h3, h4 {
 }
 
  */ /*CARDS*/
-/* .card:hover {
+/* .card-blog:hover {
     transform: scale(1.1);
-    box-shadow: 0 0 1rem $primary-color;
+    box-shadow: 0 0 1rem ;
 }
  */
 /* .borderText {
@@ -265,12 +265,10 @@ h1, h2, h3, h4 {
 
 .card {
   background-color: #6DB7C1;
-  font-family: "Rajdhani", sans-serif;
-  font-weight: bold;
+  font-family: "barlow", sans-serif;
   color: #000000;
   border-radius: 1rem;
   padding: 1.5rem;
-  width: 80%;
   transition: all 0.3s ease-in-out;
   display: flex;
   justify-content: center;
@@ -283,9 +281,10 @@ h1, h2, h3, h4 {
   text-align: center;
 }
 
-/*.list-group{
-    border-radius: 0.5rem ;
-}*/
+.list-group ul {
+  font-family: "barlow", sans-serif;
+}
+
 .list-group-item {
   background-color: #6DB7C1;
 }
@@ -368,6 +367,20 @@ h1, h2, h3, h4 {
   margin-bottom: 4rem;
 }
 
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.page-item {
+  margin: 0 0.5rem;
+}
+
+.pagination .page-item.active .page-link {
+  background-color: #FC5603;
+}
+
 .imgModal {
   width: 100%;
   max-width: 500px;
@@ -381,7 +394,7 @@ h1, h2, h3, h4 {
   vertical-align: middle;
 }
 
-.session_effect {
+.session-effect {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -398,8 +411,7 @@ h1, h2, h3, h4 {
   animation-iteration-count: 1;
   animation-direction: normal;
   animation-fill-mode: none;
-  /* shorthand
-  animation: focus-in-contract 1s linear 0s 1 normal none;*/
+  animation: focus-in-contract 1s linear 0s 1 normal none;
 }
 
 @keyframes focus-in-contract {

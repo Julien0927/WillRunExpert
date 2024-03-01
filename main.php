@@ -25,7 +25,7 @@ require_once ('App/Users.php');
         <div class="col-md-4">
             <img src="assets/images/photo2.webp" class="img-fluid imgAccueil ml-5" alt="Coureurs">
         </div>
-        <div class="col-md-5">
+        <div class="col-md-4">
             <h2 class="">COACHING INDIVIDUEL</h2>
             <p class="" style="text-align: justify">
                 Au-delà d'un simple programme d'entraînement, 
@@ -34,18 +34,16 @@ require_once ('App/Users.php');
                 Peu importe votre niveau initial et vos contraintes, 
                 l'objectif du suivi personnalisé est de vous aider à concilier la pratique avec
                 vos obligations professionnelles et familiales. 
-                Ainsi, vous optimisez l'efficacité de votre temps d'entraînement et la qualité 
-                de vos séances, permettant une amélioration de vos performances sans 
-                compromettre votre qualité de vie.
+                
             </p>
             <a href="coaching.php"><button class="btn-original" >En savoir plus</button></a>
         </div>
     </div>
 
-    <div class="row d-flex justify-content-center me-4">
-        <div class="col-md-5">
+    <div class="row d-flex justify-content-center me-4 gap-5">
+        <div class="col-md-4">
             <h2 class="">CONSULTING</h2>
-            <p class="ml-5" style="text-align: justify">
+            <p class="ms-3" style="text-align: justify">
                 Au-delà d'un simple programme d'entraînement, 
                 je vous propose un suivi sportif complet pour vous accompagner vers vos objectifs 
                 en tenant compte de tous les éléments influant sur la performance. 

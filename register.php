@@ -70,6 +70,8 @@ $user->register();
             <label for="password" class="form-label">Mot de passe</label>
             <input type="password" class="form-control" name="password" id="password" placeholder="Votre mot de passe" required>
         </div>
+        
+        <p><input type="checkbox" id="cgu" name="cgu" required class="me-2">En utilisant ce formulaire, vous acceptez que nous stockions vos données sur ce site web.</p>
         <div class="formCenter mb-3">
         <?php addCSRFTokenToForm() ?>
             <button type="submit" class="btn-secondary px-5" value="S'inscrire">S'inscrire</button>
