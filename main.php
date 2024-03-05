@@ -25,7 +25,7 @@ require_once ('App/Users.php');
         <div class="col-md-4">
             <img src="assets/images/photo2.webp" class="img-fluid imgAccueil ml-5" alt="Coureurs">
         </div>
-        <div class="col-md-4">
+        <div class="coachIndiv col-md-4">
             <h2 class="">COACHING INDIVIDUEL</h2>
             <p class="" style="text-align: justify">
                 Au-delà d'un simple programme d'entraînement, 
@@ -41,7 +41,7 @@ require_once ('App/Users.php');
     </div>
 
     <div class="row d-flex justify-content-center me-4 gap-5">
-        <div class="col-md-4">
+        <div class="consulting col-md-4">
             <h2 class="">CONSULTING</h2>
             <p class="ms-3" style="text-align: justify">
                 Au-delà d'un simple programme d'entraînement, 

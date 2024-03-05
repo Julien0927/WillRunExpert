@@ -148,7 +148,7 @@ h1, h2, h3, h4{
     border-radius: 0 1rem 1rem 0;
 }
 
-//Button
+/*Button*/
 @mixin btn {
     border: none;
     border-radius: 0.5rem;
@@ -197,33 +197,15 @@ h1, h2, h3, h4{
     padding: 0.5rem;
     transition: all 0.3s ease-in-out;
 }
-/* 
-.formation p {
-    margin-left: 90px; 
-}
-
- *//*CARDS*/
-
-/* .card-blog:hover {
-    transform: scale(1.1);
-    box-shadow: 0 0 1rem ;
-}
- */
  
-/* .borderText {
-    border: 3px solid $secondary-color;
-    border-radius: 2rem;
-    margin-left: 18rem;
-    margin-right: 18rem;
-    padding-top: 8px;
-    padding-bottom: 8px;
-}*/
+/*CARDS*/
 
 @mixin line {
     height: 0.2rem;
     margin-left: 22rem;
     margin-right: 22rem;
 }
+
 .line {
     background-image: linear-gradient(to right, white 1%, $secondary-color 38%, white 38%, white 62%, $secondary-color 62%, white 99%);
     @include line;
@@ -240,6 +222,7 @@ h1, h2, h3, h4{
 }
 
  .card {
+    width: 24rem;
     background-color: $primary-color;
     font-family: $secondary-font;
     color: $quinary-color;
@@ -268,33 +251,6 @@ h1, h2, h3, h4{
 }
 
 /*END OF CARDS*/
-
-/*.aside {
-    background-color: $secondary-color;
-    font-family: $primary-font;
-    color: $quinary-color;
-    border-radius: 0rem 1rem 1rem 0rem;
-    transition: all 0.3s ease-in-out;
-    @include center;
-}*/
-
-//Bouton carousel
-/* .carousel-control-prev-icon, .carousel-control-next-icon {
-    background-color: $secondary-color;
-    border-radius: 50%;
-    padding: 25px;
-}
-
-.carousel-control-prev {
-    justify-content: end;
-    margin-left: 70px;
-}
-
-.carousel-control-next {
-    justify-content:start;
-    margin-right: 70px;
-}
-*/
 
 .square {
     color: $quinary-color;
@@ -373,6 +329,10 @@ h1, h2, h3, h4{
     vertical-align: middle;
 }
 
+.allArticles .content {
+    width: 380px;
+}
+
 //Animation connexion
 .session-effect {
     display: flex;
@@ -407,12 +367,17 @@ h1, h2, h3, h4{
     }
 }
 
+.imgArticle{
+    width: 10%;
+    height: 10%;
+}
+
 //Footer
 .footer{
     background-color: $secondary-color;
     color: $quaternary-color;
-    padding: 1rem;
     text-align: center;
+    padding: 2px;
 }
 
 footer a{
@@ -421,3 +386,176 @@ footer a{
     transition: all 0.3s ease-in-out;
 }
 
+/************/
+/*Responsive*/
+/************/  
+@media (max-width: 768px) {
+    body, html {
+        overflow-x: hidden;
+    }
+
+    h2 {
+        font-size: 1rem;
+    }
+
+    h4 {
+        font-size: 0.8rem;
+    }
+   
+    .nav-item {
+        font-size: 0.8rem; 
+        padding: 0 0.5rem; 
+    }
+
+    .logo {
+        width: 100%; 
+        height: auto; 
+        max-width: 130px;
+        margin-inline-start: 10px;
+    }
+
+    .parallax-text {
+        top: 10%;
+        left: 60%;
+        transform: translate(-50%, -50%);
+    }
+
+    .parallax-text p, .parallax-text-3 p {
+        font-size: 1.5em; 
+    }
+
+    .imgAccueil, .imgAccueil2 {
+        border-radius: 0.5rem 0.5rem 0.5rem 0.5rem; 
+        width: 80%;
+        margin-left: 35px;
+    }
+
+    .imgAccueil2 {
+        border-radius: 0.5rem 0.5rem 0.5rem 0.5rem; 
+        width: 90%;
+        margin-left: 35px;
+    }
+
+    .coachIndiv {
+        width: 85%;
+        margin-top: 10px;
+    }
+
+    .consulting {
+        margin-left: 15px;
+    }
+
+    .consulting .btn-original {
+        margin-left: 15px;
+    }
+
+    .btn-original, .btn-secondary, .btn-tertiary {
+        padding: 0.25rem 0.5rem; 
+        font-size: 0.8rem; 
+    }
+
+    .formRegister {
+        width: 80%; 
+        margin-left: auto; 
+        margin-right: auto; 
+    }
+
+    .contact, .card {
+        width: 90%; 
+    }
+
+    .parallax-container {
+        height: 40vh; 
+      }
+    
+    .parallax-image, .parallax-image-2, .parallax-image-3, .parallax-image-4, .parallax-image-5, .parallax-image-6, .parallax-image-7, .parallax-image-8 {
+        @include parallax; 
+        background-attachment: scroll; 
+      }
+    
+      .parallax-text, .parallax-text-3 {
+        font-size: 1em; 
+        top: 50%; 
+        transform: translate(-50%, -50%); 
+    }
+
+    .profil {
+        flex-direction: column; 
+    }
+
+    .photo img {
+        width: 80%; 
+        margin-left: 100px;
+        margin-bottom: 20px;
+    }
+
+    @mixin line {
+        height: 0.2rem;
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+    }
+    .line {
+        background-image: linear-gradient(to right, white 1%, $secondary-color 33%, white 5%, white 67%, $secondary-color 62%, white 99%);
+        font-size: 1.5rem;
+        @include line;
+    }
+    
+    .line2 {
+        background-image: linear-gradient(to right,white 1%, $secondary-color 37%, white 5%, white 63%, $secondary-color 61%, white 99%);
+    @include line;
+    }
+    
+    .line3 {
+        background-image: linear-gradient(to right,white 1%, $secondary-color 22%, white 5%, white 78%, $secondary-color 75%, white 99%);
+    @include line;
+    }
+
+    .card {
+        width: 20rem; 
+    }
+    
+    .card-title {
+        font-size: 1.5rem; 
+    }
+
+    .card-text {
+        font-size: 1rem; 
+    }
+
+    .card span {
+        font-size: 0.8rem;
+    }
+
+    .list-group ul {
+        font-size: 0.8rem; 
+    }
+
+    .list-group-item {
+        margin-left: 0;
+        padding-left: 10px; 
+        padding-right: 10px;
+    }
+
+    .map {
+        width: 90%; 
+        height: auto; 
+        margin-left: 18px;
+        margin-bottom: 10px;
+    }
+
+    .imgArticle {
+        width: 50%; 
+        height: auto;
+    }
+
+    .footer {
+        flex-direction: column-reverse;
+        font-size: 0.8rem; 
+    }
+
+    .infoLegal {
+        font-size: 10px;
+        margin-bottom: 0;
+    }
+    
+} 

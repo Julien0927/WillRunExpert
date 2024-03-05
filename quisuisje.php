@@ -14,8 +14,8 @@ require_once 'templates/header.php';
     Je travaille en étroite collaboration avec les médecins du sport, podologues, ostéopathes et chirurgiens.<br>
     Je travaille parallèlement au Stade Rochelais depuis la saison 2021-2022, ce qui m'a permis de participer aux deux titres de Champions d'Europe.
 </p>
-  <div class="row d-flex justify-content-center">
-      <div class="col-md-5">
+  <div class="profil row d-flex justify-content-center">
+      <div class="photo col-md-5">
           <img class="shadow" src="assets/images/photo.webp" alt="Willy Bidault">
       </div>
       <div class="col-md-7 flex-column">

@@ -39,13 +39,13 @@ require_once ('templates/header.php');
 <div class="container">
     <div class="row">
         <div class="d-flex justify-content-center">
-            <div class="">
+            <div class="table-responsive-sm">
                 <table class="table table-striped table-responsive text-center nowrap">
                     <thead>
                         <tr>
                             <th>Date</th>
                             <th>Titre</th>
-                            <th>Contenu</th>
+                            <th class="d-none d-md-table-cell">Contenu</th>
                             <th>Image</th>
                         </tr>
                     </thead>
@@ -54,8 +54,8 @@ require_once ('templates/header.php');
                         <tr class="allArticles text-start">
                             <td><?=($article["date"])?></td>
                             <td><?=($article["title"])?></td>
-                            <td><?=($article["content"])?></td>
-                            <td class="text-center"><img src="<?=($article["image"])?>" style="width:10%; height:10%"></td>
+                            <td class="content d-none d-md-table-cell"><?=($article["content"])?></td>
+                            <td class="text-center"><img src="<?=($article["image"])?>" class="imgArticle"></td>
                             <td><input type="checkbox" name="articleBox[]" value="<?= $article['id'] ?>"></td>
                         </tr>
                         <?php } ?>

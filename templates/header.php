@@ -22,36 +22,33 @@ $currentPage = basename($_SERVER['SCRIPT_NAME']);
         <link href="assets/css/style.css" rel="stylesheet">
         <link href="assets/css/style.scss" rel="stylesheet">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-        
         <script src="assets/js/script.js" defer></script>
         <title>WillRunExpert - Officiel</title>
     </head>
 <body>
   <header class="navbar" >
     <div class="d-flex col-md-3">
-      <a href="index.php"><img class="logo" src="assets/images/logo2.png" alt="Coaching individuel"></a>
+      <a class="logo-link" href="index.php"><img class="logo" src="assets/images/logo2.png" alt="logo WillRunExpert"></a>
     </div>
-          <nav class="d-flex navbar navbar-expand-lg mx-auto ">
+          <nav class="navbar navbar-expand-lg ms-auto ">
               <div class="container-fluid">
-<!--                 <a class="navbar-brand" href="#"></a>
- -->                <button class="custom navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-                </button>
+                <a class="navbar-brand" href="#"></a>
+                  <button class="custom navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                   <ul class="navbar-nav link-offset-3">
                     <?php require_once ('lib/gestion_session.php') ?>
+                    <?php
+                    if(isset($_SESSION['user'])){?>
+                      <a class="btn btn-original me-5" href="logout.php">Se déconnecter</a>
+                      <?php } else { ?>
+                        <a class="nav-link" href="login.php" >
+                          <img src="assets/icones/cadenas-orange-24.png" class="mx-5" alt="connexion"/>
+                        </a>
+                    <?php } ?>
                   </ul>
                 </div>
               </div>
             </nav>
-            <div>
-              <?php
-              if(isset($_SESSION['user'])){?>
-                <a class="btn btn-original me-5" href="logout.php">Se déconnecter</a>
-                <?php } else { ?>
-                  <a class="nav-link" href="login.php" >
-                    <img src="assets/icones/cadenas-orange-24.png" class="mx-5" alt="connexion"/>
-                  </a>
-              <?php } ?>
-            </div>
   </header>

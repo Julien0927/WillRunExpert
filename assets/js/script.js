@@ -188,6 +188,7 @@ experiences.forEach(experience => {
 
 });
 
+document.addEventListener('DOMContentLoaded', () => {
 //Fonction qui permet de transformer les saisies (1ere lettre majuscule, le reste en minuscule)
 const firstNameInput = document.getElementById('firstName');
 const lastNameInput = document.getElementById('lastName');
@@ -209,3 +210,6 @@ firstNameInput.addEventListener('blur', () => {
 lastNameInput.addEventListener('blur', () => {
     formatNameInput(lastNameInput);
 });
+
+});
+
