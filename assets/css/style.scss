@@ -182,6 +182,10 @@ h1, h2, h3, h4{
     left: 1rem;
 }
 
+.register {
+    text-transform: uppercase;
+    font-weight: bold;
+}
 
 .shadow {
    /*filter: drop-shadow(20px -20px 0px  $primary-color);*/
@@ -370,6 +374,16 @@ h1, h2, h3, h4{
 .imgArticle{
     width: 10%;
     height: 10%;
+}
+
+.policy h3{
+    display: flex;
+    justify-content: start;
+}
+
+.policy ol>li {
+    font-size: 24px;
+    font-weight: bold;
 }
 
 //Footer

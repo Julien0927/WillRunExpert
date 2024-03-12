@@ -14,7 +14,7 @@ require_once 'templates/header.php';
     Je travaille en étroite collaboration avec les médecins du sport, podologues, ostéopathes et chirurgiens.<br>
     Je travaille parallèlement au Stade Rochelais depuis la saison 2021-2022, ce qui m'a permis de participer aux deux titres de Champions d'Europe.
 </p>
-  <div class="profil row d-flex justify-content-center">
+  <div class="profil row d-flex justify-content-center mb-5">
       <div class="photo col-md-5">
           <img class="shadow" src="assets/images/photo.webp" alt="Willy Bidault">
       </div>
@@ -28,18 +28,16 @@ require_once 'templates/header.php';
       </div>
     </div>
   </div>
-<div class="container">
+<!-- <div class="container">
   <h3 class="formation d-flex justify-content-center mx-auto mt-5 mb-3">Expériences</h3>
-<!--   <ul class="my-5" style="list-style-type: none" id="experiences"></ul>
- -->  <p class="mb-5 lh-base">
+  <p class="mb-5 lh-base">
     Diplômé depuis 2013 et installé en 2019 au centre médico-sportif de La Rochelle.<br> 
     Je travaille en étroite collaboration avec les médecins du sport, podologues, ostéopathes et chirurgiens.<br>
     Je travaille parallèlement au Stade Rochelais depuis la saison 2021-2022, ce qui m'a permis de participer aux deux titres de Champions d'Europe.
 </p>
 
- <!--  <h2 class="center">Mon approche</h2> -->
 </div>
-<?php require_once ('templates/rdvVisio.php')?>
+ --><?php require_once ('templates/rdvVisio.php')?>
 
 <div class="d-flex justify-content-center">
   <img src="assets/images/logo2.png" alt="logo WillRunExpert">

@@ -6,9 +6,11 @@ require_once ('templates/header.php');
         <div class="infoLegal col-md-4 d-flex flex-column justify-content-center">
             <ul class="d-flex flex-column text-center list-unstyled">
                 <li>Informations légales</li>
-                <li><a href="politiqueconf.php">Politique de confidentialité</a> | <a href="mentions_legales.php">Mentions légales</a></li>
-<!--                 <li><a href="mentions_legales.php">Mentions légales</a></li>
- -->            </ul>
+                <li><a href="policy.php">Politique de confidentialité</a> | <a href="mentionslegales.php">Mentions légales</a></li>
+                <li>© 2024 J.Varachas</li>
+                <li><img src="assets/icones/Logo 1 BorderDev-25.png" class="me-3"></li>
+
+             </ul>
         </div>
 
         <div class="col-md-4 d-flex align-items-center justify-content-center mt-2 mb-md-0 me-md-auto link-body-emphasis">

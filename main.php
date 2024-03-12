@@ -1,6 +1,35 @@
 <?php
 require_once ('templates/header.php');
 require_once ('App/Users.php');
+require_once ('lib/security.php');
+
+$messages = [];
+$errors = [];
+
+if(!empty($_POST)){
+    //Le formulaire a été envoyé
+    //On verifie que tous les champs sont remplis
+    if(isset($_POST["email"])&& !empty($_POST["email"])){
+        if (!filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)) {
+            $errors[] = "L'adresse email n'est pas valide.";
+        } else {
+            // Nettoyer les entrées
+            $email = filter_var($_POST["email"], FILTER_SANITIZE_EMAIL);
+
+
+$user = new App\Users\Users($db);
+
+$user->setEmail(strip_tags($_POST["email"]));
+
+$user->registerNewsletter();
+
+ $messages[]="Votre inscription a bien été enregistrée";
+}
+}else{
+    $errors[]= "Le formulaire est incomplet";
+}
+}
+
 
   if(isset($_SESSION['user']) && $_SESSION['user']['role'] === 'ROLE_ADMIN'){?>
     <div class="session-effect">
@@ -9,6 +38,19 @@ require_once ('App/Users.php');
       </div>
     </div>
   <?php } ?>
+  
+  <?php foreach($messages as $message) {?>
+    <div class="alert alert-success">
+        <?=$message;?>
+    </div>
+<?php } ?>
+<?php foreach($errors as $error) {?>
+    <div class="alert alert-danger">
+        <?=$error;?>
+    </div>
+<?php 
+} ?>
+
 
 <div class="center">
         <h2 class="mb-3">COACHING COURSE À PIED</h2>
@@ -60,6 +102,9 @@ require_once ('App/Users.php');
             <img src="assets/images/photo1.webp" class="img-fluid imgAccueil2" alt="Coureurs">
         </div>
     </div>
+
+    <?php require_once ('templates/registerNewsletter.php'); ?>
+
 <div class="parallax-container">
         <div class="parallax-image-2"></div>
 </div>

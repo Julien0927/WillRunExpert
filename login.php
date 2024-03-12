@@ -54,11 +54,11 @@ if(!empty($_POST)){
     <form  method="post" action="login.php" class="formRegister">
         <div>
             <label for="email" class="form-label">Email</label>
-            <input type="email" class="form-control" name="email" id="email" placeholder="Votre email">
+            <input type="email" class="form-control" name="email" id="email" placeholder="Votre email" required>
         </div>
         <div class="mb-3">
             <label for="password" class="form-label">Mot de passe</label>
-            <input type="password" class="form-control" name="password" id="password" placeholder="Votre mot de passe">
+            <input type="password" class="form-control" name="password" id="password" placeholder="Votre mot de passe" required>
         </div>
         <div class="formCenter mb-3">
             <?php addCSRFTokenToForm() ?>

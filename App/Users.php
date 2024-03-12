@@ -76,6 +76,14 @@ class Users {
 
         $query->execute();
     }
+    //methode permettant de recuperer les informations de l'utilisateur pour la newsletter
+    public function registerNewsletter() {
+        $query = $this->db->prepare("INSERT INTO `newsletter`(email) VALUES (:email)");
+
+        $query->bindValue(":email", $this->email, PDO::PARAM_STR);
+
+        $query->execute();
+    }
 
 
     //methode permettant de verifier le mot de passe

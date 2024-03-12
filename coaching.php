@@ -11,13 +11,12 @@ require_once 'templates/header.php';
 <div>
     <h1 class="line mb-3">Le principe</h1> 
     <p class="text-center borderText mt-5 mb-3">
-        Vous souhaitez vous lancer un objectif, que ce soit en termes de distance ou de performance ?<br>
+    Vous souhaitez vous lancer un objectif, que ce soit en termes de distance ou de performance ?<br>
     Je suis là pour vous accompagner tout au long de votre préparation !<br>
     Nous déterminons ensemble un plan d'entrainement individualisé pour réussir à atteindre votre objectif.<br>
     Je reste attentif à vos sensations après chaque séance afin d'adapter au mieux votre charge d'entrainement. L'enjeu ? Éviter les blessures !
     </p>
 </div>
-<div class="">
 <h2 class="line2 mt-5">Suivi annuel</h2>
 <div class="row d-flex justify-content-center gap-3 mt-5 mb-5">
         <div class="card m-0">
@@ -35,9 +34,7 @@ require_once 'templates/header.php';
             <ul class="list-group list-group-flush servicesPremium"></ul>
         </div>
 </div>
-</div>
 
-<div>
     <h2 class="line3 mb-3">Pour atteindre votre objectif</h2>
 <div class="row d-flex justify-content-center gap-3 mt-5 mb-5">
     <div class="card m-0">
@@ -56,7 +53,6 @@ require_once 'templates/header.php';
         </div>
         <ul class="list-group list-group-flush services"></ul>
     </div>
-</div>
 </div>
 <?php require_once ('templates/rdvVisio.php')?>
 
