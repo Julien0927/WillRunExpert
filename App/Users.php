@@ -130,7 +130,17 @@ class Users {
         return $query->fetchAll();
     }
 
-    public function logout() {
+/* //Fonction permettant de supprimer un utillisateur
+    public function deleteUserNewsletter(): void {
+        $sql = "DELETE FROM `newsletter` WHERE id=:id";
+        $query = $this->db->prepare($sql);
+
+        $query->bindValue(":id", $this->id, PDO::PARAM_INT);
+
+        $query->execute();
+    }
+
+ */    public function logout() {
         session_start();
         session_destroy();
     }

@@ -9,8 +9,6 @@ $messages = [];
 $errors = [];
 
 if(!empty($_POST)){
-    //Le formulaire a été envoyé
-    //On verifie que tous les champs sont remplis
     if(isset($_POST["firstName"], $_POST["lastName"],$_POST["email"], $_POST["password"])
         && !empty($_POST["firstName"]) && !empty($_POST["lastName"]) && !empty($_POST["email"]) && !empty($_POST["password"])
     ){
@@ -71,7 +69,7 @@ $user->register();
             <input type="password" class="form-control" name="password" id="password" placeholder="Votre mot de passe" required>
         </div>
         
-        <p><!--<input type="checkbox" id="cgu" name="cgu" required class="me-2">-->En utilisant ce formulaire, vous acceptez que nous stockions vos données sur ce site web.</p>
+        <p>En utilisant ce formulaire, vous acceptez que nous stockions vos données sur ce site web.</p>
         <div class="formCenter mb-3">
         <?php addCSRFTokenToForm() ?>
             <button type="submit" class="btn-secondary px-5" value="S'inscrire">S'inscrire</button>

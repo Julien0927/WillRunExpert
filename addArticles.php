@@ -61,11 +61,7 @@ require_once ('templates/header.php');
             <label for="content">Texte</label>
             <textarea rows="6" class="form-control" placeholder="Contenu de l'article" name="content" id="content"></textarea>
         </div>    
-<!--         <div class="mb-3">
-            <label for="link">Lien</label>
-            <input class="form-control" placeholder="Lien de l'article" name="link" id="link">
-        </div>  
- -->        <div class="row mb-3">
+        <div class="row mb-3">
                 <div class="d-flex  justify-content-center  align-items-center gap-3">  
                 <label for="date" class="form-label">Date</label>
                 <input type="date" class="form-control" name="date" id="date">

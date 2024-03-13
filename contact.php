@@ -25,7 +25,6 @@ require_once 'templates/header.php';
                     <li class="mb-4"><img src="assets/icones/localisation-24.png" alt="localisation" class="me-3">Rue des Trois Frères Bât. C, 17000 La Rochelle</li>
                     <li class="mb-4"><img src="assets/icones/phone-24.png" alt="telephone" class="me-3">06 09 33 00 93</li>
                 </ul>
-                <!--<img src="assets/images/dos_carte_visite.webp" alt="coordonnées de contact" width="400" height="300">-->
             </div>
         </div>
     </div>

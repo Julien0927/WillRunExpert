@@ -1,17 +1,36 @@
 <?php
 session_start();
 
-require_once ('App/Users.php');
+require_once ('App/Newsletter.php');
 require_once ('lib/pdo.php');
 
 $messages = [];
 $errors = [];
 
+$newsletters = new App\Newsletter\Newsletter($db);
 
-$users = new App\Users\Users($db);
+
+$allNewsletters = $newsletters->getAllEmails();
 
 
-$allUsers = $users->getAllUsers();
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['deleteEmail'])) {
+    foreach ($_POST['emailBox'] as $idToDelete) {
+        $newsletters->setId($idToDelete);
+        $newsletters->deleteEmail();
+    }
+    if (count($_POST['emailBox']) > 1) {
+
+        $_SESSION['messages'] = ["Les utilisateurs ont bien été supprimés"];
+        header("Location: " . $_SERVER['PHP_SELF']);
+        exit;
+    } else {
+        $_SESSION['messages'] = ["L'utilisateur a bien été supprimé"];
+        header("Location: " . $_SERVER['PHP_SELF']);
+        exit;
+
+    }
+}
+
 require_once ('templates/messages.php');
 
 require_once ('templates/header.php');
@@ -26,19 +45,15 @@ require_once ('templates/header.php');
                 <table class="table table-striped table-responsive text-center nowrap">
                     <thead>
                         <tr>
-                            <th>Prénom</th>
-                            <th>Nom</th>
-                            <th>Email</th>
+                            <th>Emails</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <?php foreach ($allUsers as $users) { ?>
+                        <?php foreach ($allNewsletters as $newsletters) { ?>
                         <tr class="allArticles text-start">
-                            <td><?=($users["firstName"])?></td>
-                            <td><?=($users["lastName"])?></td>
-                            <td><?=($users["email"])?></td>
-<!--                             <td><input type="checkbox" name="articleBox[]" value="<?= $users['id'] ?>"></td>
- -->                        </tr>
+                            <td><?=($newsletters["email"])?></td>
+                            <td><input type="checkbox" name="emailBox[]" value="<?= $newsletters['id'] ?>"></td>
+                        </tr>
                         <?php } ?>
                     </tbody>
                 </table>
@@ -48,8 +63,8 @@ require_once ('templates/header.php');
     <div class="row">
         <div class="d-flex justify-content-end">
             <div class=" my-3">
-<!--                 <button type="submit" class="btn btn-original" name="deleteArticle">Supprimer</button>
- -->            </div>
+                 <button type="submit" class="btn btn-original" name="deleteEmail">Supprimer</button>
+            </div>
         </div>
     </div>
 </div>

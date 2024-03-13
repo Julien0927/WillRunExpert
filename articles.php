@@ -29,9 +29,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['deleteArticle'])) {
 }
 
 $allArticles = $articles->getAllArticles();
-require_once ('templates/messages.php');
 
 require_once ('templates/header.php');
+require_once ('templates/messages.php');
 ?>
 
 <h2>Liste des articles</h2>

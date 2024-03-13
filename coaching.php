@@ -90,6 +90,5 @@ require_once 'templates/header.php';
 
 
 <?php
-/*require_once 'templates/carousel.php';*/
 require_once 'templates/footer.php';
 ?>

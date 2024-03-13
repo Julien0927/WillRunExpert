@@ -2,17 +2,24 @@
 
 // Fonction pour générer un jeton CSRF
 function generateCSRFToken() {
+    try {
     if (empty($_SESSION['csrf_token'])) {
         $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
     }
+} catch (Exception $e) {
+    error_log('Erreur lors dela génération du token CSRF : ' . $e->getMessage());
+}
 }
 
 // Fonction pour ajouter un champ CSRF à un formulaire
 function addCSRFTokenToForm() {
     generateCSRFToken();
+    if (!empty($_SESSION['csrf_token'])){
     echo '<input type="hidden" name="csrf_token" value="' . $_SESSION['csrf_token'] . '">';
+    }else {
+        echo "Une erreur est survenue. Veuillez réessayer plus tard.";
+    }
 }
-
 // Fonction pour vérifier le jeton CSRF
 function verifyCSRFToken() {
     if (isset($_POST['csrf_token']) && $_POST['csrf_token'] === $_SESSION['csrf_token']) {
