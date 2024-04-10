@@ -14,6 +14,19 @@ body{
     font-family: $primary-font;
 }
 
+.textCenter {
+    text-align: center;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+}
+
+.textAlign {
+    text-align: justify;
+}   
+
 .nav-item{
     font-family: $primary-font;
     font-size: 1rem;
@@ -67,7 +80,7 @@ h1, h2, h3, h4{
     background-size: cover;
     background-position: center;
     background-attachment: fixed; /* Important pour l'effet de parallaxe */
-    height: 80%;
+    height: 90%;
     width: 100%;
 }
 .parallax-image {
@@ -135,6 +148,13 @@ h1, h2, h3, h4{
 
 /* Fin Parallaxe */
 
+.coachIndiv, .consulting{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .imgAccueil, .imgAccueil2 {
     box-shadow: $quinary-color 0rem 0 1rem;
     max-width: 100%;
@@ -182,6 +202,16 @@ h1, h2, h3, h4{
     left: 1rem;
 }
 
+.articleLink {
+    text-decoration: none;
+    color: $secondary-color;
+    font-weight: bold;
+}
+
+.alignText {
+   display: flex;
+   align-items: center;
+}
 /*Messages*/
 
 @mixin alert {

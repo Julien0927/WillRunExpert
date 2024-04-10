@@ -4,6 +4,19 @@ body {
   font-family: "Rajdhani", sans-serif;
 }
 
+.textCenter {
+  text-align: center;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+}
+
+.textAlign {
+  text-align: justify;
+}
+
 .nav-item {
   font-family: "Rajdhani", sans-serif;
   font-size: 1rem;
@@ -53,7 +66,7 @@ h1, h2, h3, h4 {
   background-size: cover;
   background-position: center;
   background-attachment: fixed; /* Important pour l'effet de parallaxe */
-  height: 80%;
+  height: 90%;
   width: 100%;
 }
 
@@ -62,7 +75,7 @@ h1, h2, h3, h4 {
   background-size: cover;
   background-position: center;
   background-attachment: fixed; /* Important pour l'effet de parallaxe */
-  height: 80%;
+  height: 90%;
   width: 100%;
 }
 
@@ -71,7 +84,7 @@ h1, h2, h3, h4 {
   background-size: cover;
   background-position: center;
   background-attachment: fixed; /* Important pour l'effet de parallaxe */
-  height: 80%;
+  height: 90%;
   width: 100%;
 }
 
@@ -80,7 +93,7 @@ h1, h2, h3, h4 {
   background-size: cover;
   background-position: center;
   background-attachment: fixed; /* Important pour l'effet de parallaxe */
-  height: 80%;
+  height: 90%;
   width: 100%;
 }
 
@@ -89,7 +102,7 @@ h1, h2, h3, h4 {
   background-size: cover;
   background-position: center;
   background-attachment: fixed; /* Important pour l'effet de parallaxe */
-  height: 80%;
+  height: 90%;
   width: 100%;
 }
 
@@ -98,7 +111,7 @@ h1, h2, h3, h4 {
   background-size: cover;
   background-position: center;
   background-attachment: fixed; /* Important pour l'effet de parallaxe */
-  height: 80%;
+  height: 90%;
   width: 100%;
 }
 
@@ -107,7 +120,7 @@ h1, h2, h3, h4 {
   background-size: cover;
   background-position: center;
   background-attachment: fixed; /* Important pour l'effet de parallaxe */
-  height: 80%;
+  height: 90%;
   width: 100%;
 }
 
@@ -116,7 +129,7 @@ h1, h2, h3, h4 {
   background-size: cover;
   background-position: center;
   background-attachment: fixed; /* Important pour l'effet de parallaxe */
-  height: 80%;
+  height: 90%;
   width: 100%;
 }
 
@@ -144,6 +157,13 @@ h1, h2, h3, h4 {
 }
 
 /* Fin Parallaxe */
+.coachIndiv, .consulting {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .imgAccueil, .imgAccueil2 {
   box-shadow: #000000 0rem 0 1rem;
   max-width: 100%;
@@ -207,6 +227,17 @@ h1, h2, h3, h4 {
   position: absolute;
   bottom: 1rem;
   left: 1rem;
+}
+
+.articleLink {
+  text-decoration: none;
+  color: #FC5603;
+  font-weight: bold;
+}
+
+.alignText {
+  display: flex;
+  align-items: center;
 }
 
 /*Messages*/
@@ -527,7 +558,7 @@ footer a {
     background-size: cover;
     background-position: center;
     background-attachment: fixed; /* Important pour l'effet de parallaxe */
-    height: 80%;
+    height: 90%;
     width: 100%;
     background-attachment: scroll;
   }

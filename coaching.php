@@ -41,7 +41,7 @@ require_once 'templates/header.php';
         <div class="card-body">
             <h3 class="card-title text-center">FORMULE SPRINT</h3>
             <h3 class="card-text text-center">3 mois</h3>
-            <h3 class="card-text text-center">200€</h3>
+            <h3 class="card-text text-center">250€</h3>
         </div>
         <ul class="list-group list-group-flush services"></ul>
     </div>
@@ -49,7 +49,7 @@ require_once 'templates/header.php';
         <div class="card-body">
             <h3 class="card-title text-center">FORMULE ENDURANCE</h3>
             <h3 class="card-text text-center">6 mois</h3>
-            <h3 class="card-text text-center">300€</h3>
+            <h3 class="card-text text-center">350€</h3>
         </div>
         <ul class="list-group list-group-flush services"></ul>
     </div>

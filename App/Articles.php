@@ -151,6 +151,8 @@ class Articles {
 
     // Méthode pour récupérer les articles pour une page donnée
     public function getArticlesByPage(int $pageActuelle = 1): array {
+        $pageActuelle = max(1, $pageActuelle);
+        
         $offset = ($pageActuelle - 1) * $this->articlesParPage;
         $sql = "SELECT * FROM articles ORDER BY date DESC LIMIT :limit OFFSET :offset";
         $stmt = $this->db->prepare($sql);
