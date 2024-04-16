@@ -319,11 +319,10 @@ h1, h2, h3, h4{
     background-color: $tertiary-color;
 }
 
- .formRegister{
-    width: 50%;
-    margin-left: 50px;
+ .formRegister label{
+    font-weight: bold;
  }
- 
+  
 .contact {
     background-color: $secondary-color;
     font-family: $primary-font;

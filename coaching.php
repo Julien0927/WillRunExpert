@@ -54,7 +54,7 @@ require_once 'templates/header.php';
         <ul class="list-group list-group-flush services"></ul>
     </div>
 </div>
-<?php require_once ('templates/rdvVisio.php')?>
+<?php require_once ('templates/contactButton.php')?>
 
 
  <div class="container-fluid mt-3">
