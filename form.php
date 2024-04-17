@@ -1,6 +1,6 @@
 <?php
-ob_start();
-require_once ('templates/header.php');
+/* ob_start();
+ */require_once ('templates/header.php');
 require_once ('lib/pdo.php');
 require_once ('App/FormContact.php');
 require_once ('lib/security.php');
@@ -43,10 +43,10 @@ $user->formRegister();
 }else{
     $errors[]= "Le formulaire est incomplet";
 }
-}
+} 
 ?>
 
-   <form  method="POST" action="form.php" class="formRegister">
+   <form  method="POST" action="./lib/sendMail.php" class="formRegister">
         <div class="row center">
             <div class="col-md-4">
                 <div class="mb-3">
@@ -84,6 +84,3 @@ $user->formRegister();
         </div>
     </form>
 
-<?php
-ob_end_flush();
-?>

@@ -1,8 +1,16 @@
 <?php
+session_start();
 require_once 'templates/header.php';
-?>
+require_once 'templates/messages.php'; 
 
-<?php require_once ('templates/messages.php'); ?>
+// Vérifie si la variable de session est définie
+if (isset($_SESSION['message'])) {
+    // Affiche le message
+    echo '<div class="alert alert-success" role="alert">' . $_SESSION['message'] . '</div>';
+    // Nettoie la variable de session après l'avoir affichée
+    unset($_SESSION['message']);
+}
+?>
 <div class="parallax-container">
     <div class="parallax-image-5"></div>
     <div class="parallax-text-3">
