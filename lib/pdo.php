@@ -1,8 +1,8 @@
 <?php
 
 /* define('DB_HOST', 'localhost');
-define('DB_NAME', 'willrunexpert');
-define('DB_USER', 'root');
+define('DB_NAME', '');
+define('DB_USER', '');
 define('DB_PASSWORD', '');
 
 $dsn = 'mysql:dbname=' . DB_NAME . ';host=' . DB_HOST . ';charset=utf8';
