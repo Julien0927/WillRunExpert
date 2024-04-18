@@ -14,6 +14,7 @@ $menu = [
     'stage.php' => 'Stages',
     'blog.php' => 'Blog',
     'contact.php' => 'Contact',
+    
     /*'register.php' => 'Inscription', */
 ];
 
