@@ -1,8 +1,8 @@
 <?php
 
 /* define('DB_HOST', 'localhost');
-define('DB_NAME', 'willrunexpert');
-define('DB_USER', 'root');
+define('DB_NAME', '');
+define('DB_USER', '');
 define('DB_PASSWORD', '');
 
 $dsn = 'mysql:dbname=' . DB_NAME . ';host=' . DB_HOST . ';charset=utf8';
@@ -22,8 +22,8 @@ try {
 } */
 
 try {
-$db = new PDO('mysql:host=mysql-julienvarachas.alwaysdata.net; dbname=julienvarachas_willrunexpert;port=3306; charset=utf8mb4','327887', 'T0mEmm@1114');
- /*$db = new PDO ('mysql:host=localhost; dbname=willrunexpert; port=3306; charset=utf8mb4', 'root', '');*/
+$db = new PDO('');
+ /*$db = new PDO (');*/
 
 
 $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
