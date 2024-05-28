@@ -52,28 +52,33 @@ $user->registerNewsletter();
 } ?>
 
 
-<div class="center">
-        <h1 class="mb-3">COACHING COURSE À PIED</h1>
-<!--         <h4 class="center mb-3">ACCOMPAGNEMENT DU COUREUR - STRATÉGIE DE RÉCUPÉRATION</h4>-->
- </div>
-<div class="parallax-container">
-    <div class="parallax-image"></div>
-    <div class="parallax-text">
-        <p>Ne limite pas tes défis,<br>défis tes limites!</p>
-    </div>
+<!-- <div class="d-flex flex-column center mb-5">
+    </div> -->
+ <div class="parallax-container">
+        <div class="parallax-image kenburns-top">
+            <h1 class="title">WillRunExpert</h1>
+        </div>
+        <div class="parallax-text">
+            <p class="coachrun ms-5">COACHING COURSE Á PIED</p>
+            <div class="homeBtn">
+                <button class="btn-original mx-3"><a href="coaching.php" class="btnLink">DÉCOUVREZ NOS OFFRES</a></button>
+                <button class="btn-secondary"><a href="contact.php" class="btnLink">CONTACT</a></button>
+            </div>
+        </div>
 </div>
-<section class="mb-5">
-    <h2>Découvrez le Plaisir de Courir Sans Limites avec WillRunExpert</h2>
-    <p class="textCenter mx-auto ms-5 fs-5">
-        Tu as déjà tenté l'aventure de la course à pied, pourtant chaque pas t'a semblé être un défi insurmontable ? <br>
+<section class="paragraph mb-5 mx-2">
+    <h2 class="mt-5">Découvrez le Plaisir de Courir Sans Limites avec WillRunExpert</h2>
+    <p class="textCenter mx-auto fs-5">
+        Tu as déjà tenté l'aventure de la course à pied, pourtant chaque pas t'a semblé être un défi insurmontable ?<br>
         Une blessure t'a découragé et tu penses que ce sport n'est pas fait pour toi ? ⛔<br>
-        Avec WillRunExpert, je t'invite à redécouvrir le bonheur de courir. <br>
-        En tant que kinésithérapeute spécialisé, ma mission est de te préparer pour la course sans douleur ni blessure.<br>
-        Grâce à une planification d'entraînement progressive, spécialement conçue pour les coureurs débutants, <br>tu verras tes progrès chaque semaine, adoptant ainsi les bonnes pratiques et évitant les blessures courantes.<br>
-        Alors, enfile vite tes chaussures et lance-toi dès aujourd'hui avec notre essai gratuit ! 🚀
+        <strong>Mon crédo : le sport pour tous.</strong> Je suis persuadé qu’avec un programme individualisé, <br>
+        des objectifs bien définis et une approche globale, tout le monde peut courir s’il en a envie.<br> 
+        Grâce à une planification d'entraînement progressive, spécialement conçue pour les coureurs débutants,<br>
+        tu verras tes progrès chaque semaine, adoptant ainsi les bonnes pratiques et évitant les blessures courantes.<br>
+        Alors que ton objectif soit de perdre du poids ou bien de courir simplement pour le plaisir, viens faire le point avec moi. 
     </p>
 </section>
-<section class="flex-column mb-5">
+<!--<section class="flex-column mb-5">
     
         <div class="col-md-6 mx-auto mb-3">
             <h2 class="textCenter">WillRunExpert : Ton Allié dans la Course à Pied</h2>
@@ -89,10 +94,10 @@ $user->registerNewsletter();
                     Je m'adapte à toi et à tes contraintes, conscients que chacun mène une vie personnelle et professionnelle bien remplie.
                 </p>
         </div>
-</section>
+</section>-->
     <div class="row d-flex justify-content-center mb-5 mr-4">
         <div class="col-md-4">
-            <img src="assets/images/photo2.webp" class="img-fluid imgAccueil ml-5" alt="Coureurs">
+            <img src="assets/images/coureur-loisir.jpg" class="img-fluid imgAccueil ml-5" loading="lazy" alt="Coureur loisir">
         </div>
         <div class="coachIndiv col-md-4">
             <h3 class="">Les Formules de Coaching</h3>
@@ -103,8 +108,8 @@ $user->registerNewsletter();
         </div>
     </div>
 
-    <div class="row d-flex justify-content-center me-4 gap-5">
-        <div class="consulting col-md-4 mb-5">
+    <div class="row d-flex justify-content-center me-4">
+        <div class="consulting col-md-4">
             <h3>Des Stages pour l'Excellence</h3>
                 <p class="textAlign ms-4">
                     Participe à nos stages de cinq jours, alliant course à pied, nutrition et récupération, 
@@ -114,12 +119,12 @@ $user->registerNewsletter();
             <!--<a href="coaching.php"><button class="btn-original" >En savoir plus</button></a>-->
         </div>
         <div class="col-md-4 mb-5">
-            <img src="assets/images/photo1.webp" class="img-fluid imgAccueil2" alt="Coureurs">
+            <img src="assets/images/chamonix.jpg" class="img-fluid imgAccueil2" loading="lazy" alt="Coureurs">
         </div>
     </div>
     <div class="row d-flex justify-content-center mb-5 mr-4">
         <div class="col-md-4">
-            <img src="assets/images/people.jpg" class="img-fluid imgAccueil ml-5" alt="Coureurs">
+            <img src="assets/images/montagne.jpg" class="img-fluid imgAccueil ml-5" loading="lazy" alt="trail-loisir">
         </div>
         <div class="coachIndiv col-md-4">
             <h2 class="textCenter">Des Programmes de Coaching Adaptés à Toi</h2>
@@ -130,7 +135,7 @@ $user->registerNewsletter();
         </div>
     </div>
 
-    <?php require_once ('templates/registerNewsletter.php'); ?>
+    <!--<?php require_once ('templates/registerNewsletter.php'); ?>-->
 
 <div class="parallax-container">
         <div class="parallax-image-2"></div>

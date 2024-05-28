@@ -16,9 +16,9 @@ $articlesPageActuelle = $articles->getArticlesByPage($pageActuelle);
 ?>
 
 <div class="parallax-container">
-    <div class="parallax-image-6"></div>
+    <div class="parallax-image-6" loading="lazy" alt="image blog"></div>
     <div class="parallax-text-3">
-        <p>BLOG</p>
+        <p>LE BLOG</p>
     </div>
 </div>
 

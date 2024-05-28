@@ -38,37 +38,36 @@ $currentPage = basename($_SERVER['SCRIPT_NAME']);
         </script>
         <!-- End Google Tag Manager -->
     </head>
-<body>
-<!-- Google Tag Manager (noscript) -->
-  <noscript>
-    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WR9Z2FQT"
-    height="0" width="0" style="display:none;visibility:hidden">
-    </iframe>
-  </noscript>
-<!-- End Google Tag Manager (noscript) -->
-  <header class="navbar" >
-    <div class="d-flex col-md-3">
-      <a class="logo-link" href="index.php"><img class="logo" src="assets/images/logo2.png" alt="logo WillRunExpert"></a>
-    </div>
-          <nav class="navbar navbar-expand-lg ms-auto ">
-              <div class="container-fluid">
-                <a class="navbar-brand" href="#"></a>
+    <body>
+      <!-- Google Tag Manager (noscript) -->
+      <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WR9Z2FQT"
+          height="0" width="0" style="display:none;visibility:hidden">
+        </iframe>
+      </noscript>
+      <!-- End Google Tag Manager (noscript) -->
+      <header class="d-flex center navbar">
+        <nav class="navbar navbar-expand-lg ">
+          <div class="container-fluid ">
+            <a class="logo-link" href="index.php"><img class="logo" src="assets/images/logo2.png" alt="logo WillRunExpert"></a>
+              <!--<a class="navbar-brand" href="#"></a>-->            
                   <button class="custom navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                   </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                  <ul class="navbar-nav link-offset-3">
-                    <?php require_once ('lib/gestion_session.php') ?>
-                    <?php
+                  <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav link-offset-3 d-flex align-items-center">
+                      <?php require_once ('lib/gestion_session.php') ?>
+                      <?php
                     if(isset($_SESSION['user'])){?>
-                      <a class="btn btn-original me-5" href="logout.php">Se déconnecter</a>
+                      <a class="btn btn-original me-2" href="logout.php">Se déconnecter</a>
                       <?php } else { ?>
                         <a class="nav-link" href="login.php" >
-                          <img src="assets/icones/cadenas-orange-24.png" class="mx-5" alt="connexion"/>
+                          <img src="assets/icones/cadenas-orange-24.png" class="connexion" loading="lazy" alt="connexion"/>
                         </a>
-                    <?php } ?>
-                  </ul>
+                        <?php } ?>
+                      </ul>
                 </div>
               </div>
             </nav>
-  </header>
+          </header>
+  

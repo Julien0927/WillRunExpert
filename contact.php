@@ -12,7 +12,7 @@ if (isset($_SESSION['message'])) {
 }
 ?>
 <div class="parallax-container">
-    <div class="parallax-image-5"></div>
+    <div class="parallax-image-5" loading="lazy"></div>
     <div class="parallax-text-3">
         <p>CONTACT</p>
     </div>
@@ -34,25 +34,14 @@ if (isset($_SESSION['message'])) {
                 <div class="d-flex flex-column">
                     <h2 class="text-center mb-4">Willy BIDAULT</h2>
                     <ul style="list-style: none">
-                    <li class="mb-4"><img src="assets/icones/instagram-24.png" alt="@willrunexpert" class="me-3">@willrunexpert</li>
-                    <li class="mb-4"><img src="assets/icones/email-24.png" alt="email" class="me-3">willy.physio@gmail.com</li>
-                    <li class="mb-4"><img src="assets/icones/localisation-24.png" alt="localisation" class="me-3">Rue des Trois Frères Bât. C, 17000 La Rochelle</li>
-                    <li class="mb-4"><img src="assets/icones/phone-24.png" alt="telephone" class="me-3">06 09 33 00 93</li>
+                    <li class="mb-4"><img src="assets/icones/instagram-24.png" loading="lazy" alt="@willrunexpert" class="me-3">@willrunexpert</li>
+                    <li class="mb-4"><img src="assets/icones/email-24.png" loading="lazy" alt="email" class="me-3">willy.physio@gmail.com</li>
+                    <li class="mb-4"><img src="assets/icones/localisation-24.png" loading="lazy" alt="localisation" class="me-3">Rue des Trois Frères Bât. C, 17000 La Rochelle</li>
+                    <li class="mb-4"><img src="assets/icones/phone-24.png" loading="lazy" alt="telephone" class="me-3">06 09 33 00 93</li>
                 </ul>
             </div>
         </div>
     </div>
-
-<!--     <div class="d-flex flex-column justify-content-center text-center gap-2">
-    <div class="items-start">
-        <img src="assets/icones/utilisateur-24.png" alt="Patient">
-        Accepte les nouveaux patients sur Doctolib
-    </div>
-    <div class="items-start">
-        <img src="assets/icones/marqueur-24.png" alt="localisation">
-        Cabinet de kinésithérapie IR2S - La Rochelle<br> rue des Trois Frères 17000 La Rochelle
-        </div>
-    </div>-->
 
 <?php
 require_once 'templates/footer.php';

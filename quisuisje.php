@@ -2,7 +2,7 @@
 require_once 'templates/header.php';
 ?>
 <div class="parallax-container">
-    <div class="parallax-image-3"></div>
+    <div class="parallax-image-3" loading="lazy"></div>
     <div class="parallax-text-3">
         <p>QUI SUIS-JE ?</p>
     </div>
@@ -16,7 +16,7 @@ require_once 'templates/header.php';
 </p>
   <div class="profil row d-flex justify-content-center mb-5">
       <div class="photo col-md-5">
-          <img class="shadow" src="assets/images/photo.webp" alt="Willy Bidault">
+          <img class="shadow" src="assets/images/photo.webp" loading="lazy" alt="Willy Bidault">
       </div>
       <div class="col-md-7 flex-column">
           <h3 class="formation mx-auto">Diplômes</h3>
@@ -39,8 +39,8 @@ require_once 'templates/header.php';
 </div>
  --><?php require_once ('templates/rdvVisio.php')?>
 
-<div class="d-flex justify-content-center">
-  <img src="assets/images/logo2.png" alt="logo WillRunExpert">
+<div class="d-flex justify-content-center mb-4">
+  <img src="assets/images/logo2.png" loading="lazy" alt="logo WillRunExpert">
 </div>
 <?php
 require_once 'templates/footer.php';

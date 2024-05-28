@@ -61,27 +61,27 @@ require_once 'templates/header.php';
     <div class="row justify-content-center">
         <div class="col-sm-12 d-flex flex-wrap justify-content-around square">
             <div class="p-2 text-center">
-                <img src="assets/icones/black-gourou-75.png" class="mb-1" alt="plaisir bien-être" style="width: 50px; height: auto;">
+                <img src="assets/icones/black-gourou-75.png" class="mb-1" loading="lazy" alt="plaisir bien-être" style="width: 50px; height: auto;">
                 <h5>Bien-être</h5>
             </div>
             <div class="p-2 text-center">
-                <img src="assets/icones/black-confiance-75.png" class="mb-1" alt="confiance" style="width: 50px; height: auto;">
+                <img src="assets/icones/black-confiance-75.png" class="mb-1" loading="lazy" alt="confiance" style="width: 50px; height: auto;">
                 <h5>Confiance</h5>
             </div>
             <div class="p-2 text-center">
-                <img src="assets/icones/black-experience-75.png" class="mb-1" alt="experience" style="width: 50px; height: auto;">
+                <img src="assets/icones/black-experience-75.png" class="mb-1" loading="lazy" alt="experience" style="width: 50px; height: auto;">
                 <h5>Expérience</h5>
             </div>
             <div class="p-2 text-center">
-                <img src="assets/icones/black-ecoute-75.png" class="mb-1" alt="ecoute" style="width: 50px; height: auto;">
+                <img src="assets/icones/black-ecoute-75.png" class="mb-1" loading="lazy" alt="ecoute" style="width: 50px; height: auto;">
                 <h5>Ecoute</h5>
             </div>
             <div class="p-2 text-center">
-                <img src="assets/icones/black-discipline-75.png" class="mb-1" alt="discipline" style="width: 50px; height: auto;">
+                <img src="assets/icones/black-discipline-75.png" class="mb-1" loading="lazy" alt="discipline" style="width: 50px; height: auto;">
                 <h5>Discipline</h5>
             </div>
             <div class="p-2 text-center">
-                <img src="assets/icones/black-prevention-75.png" class="mb-1" alt="prevention" style="width: 50px; height: auto;">
+                <img src="assets/icones/black-prevention-75.png" class="mb-1" loading="lazy" alt="prevention" style="width: 50px; height: auto;">
                 <h5>Prévention</h5>
             </div>
         </div>

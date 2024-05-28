@@ -8,7 +8,7 @@ require_once ('templates/header.php');
                 <li>Informations légales</li>
                 <li><a href="policy.php">Politique de confidentialité</a> | <a href="mentionslegales.php">Mentions légales</a></li>
                 <li>© 2024 J.Varachas</li>
-                <li><img src="assets/icones/Logo 1 BorderDev-25.png" class="me-3"></li>
+                <li><img src="assets/icones/Logo 1 BorderDev-25.png" class="me-3" alt="logo Borderdev"></li>
 
              </ul>
         </div>
@@ -24,8 +24,7 @@ require_once ('templates/header.php');
         </div>
 
         <ul class="nav col-md-3 justify-content-center align-items-center text-center ">
-<!--             <a href="" title="facebook WillRunExpert"><img src="assets/icones/facebook.png" alt="lien FaceBook"></a>
- -->            <a href="https://www.instagram.com/willrunexpert/" title="instagram WillRunExpert"><img src="assets/icones/instagram.png" alt="lien Instagram"></a>
+            <a href="https://www.instagram.com/willrunexpert/" title="instagram WillRunExpert"><img src="assets/icones/instagram.png" alt="lien Instagram"></a>
         </ul>
     </footer>
 </body>

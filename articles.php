@@ -1,11 +1,22 @@
 <?php
+ob_start();
 session_start();
+
+$messages = [];
+$errors = [];
+require_once ('templates/header.php');
+/*require_once ('lib/gestion_session.php'); // Assure la gestion des sessions et des rôles
+ */
+// Vérifier que l'utilisateur est un administrateur
+if (!isset($_SESSION['user']) || $_SESSION['user']['role'] !== 'ROLE_ADMIN') {
+    $_SESSION['errors'] = ["Accès refusé. Vous devez être administrateur pour accéder à cette page."]; // Stocker le message
+    header('Location: login.php'); // Rediriger vers la page de connexion
+    exit;
+}
 
 require_once ('App/Articles.php');
 require_once ('lib/pdo.php');
 
-$messages = [];
-$errors = [];
 
 
 $articles = new App\Articles\Articles($db);
@@ -30,7 +41,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['deleteArticle'])) {
 
 $allArticles = $articles->getAllArticles();
 
-require_once ('templates/header.php');
 require_once ('templates/messages.php');
 ?>
 
